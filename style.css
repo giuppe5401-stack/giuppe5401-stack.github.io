@@ -1,25 +1,50 @@
 
-:root{--bg:#0b1220;--panel:#0f172a;--text:#e5e7eb;--muted:#94a3b8}
-*{box-sizing:border-box}
-html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial,sans-serif;line-height:1.6}
-.container{max-width:980px;margin:0 auto;padding:24px}
-nav{display:flex;gap:16px;justify-content:flex-end;padding:12px 24px;border-bottom:1px solid #1f2937;background:rgba(15,23,42,.6);backdrop-filter:blur(8px);position:sticky;top:0}
-nav a{color:var(--muted);text-decoration:none}
-nav a:hover{color:#fff}
-.hero{display:grid;gap:16px;place-items:start;padding:64px 24px}
-h1{font-size:clamp(28px,4vw,44px);margin:0}
-.tag{color:var(--muted)}
-.cta{display:inline-block;margin-top:12px;padding:10px 14px;border:1px solid #334155;border-radius:12px;text-decoration:none;color:#e5e7eb}
-.cta:hover{background:#111827}
-.grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
-.card{background:var(--panel);border:1px solid #1f2937;border-radius:16px;padding:18px}
-.card h3{margin-top:0}
-footer{padding:24px;color:var(--muted);text-align:center;border-top:1px solid #1f2937;margin-top:24px}
-.badges{display:flex;gap:10px;flex-wrap:wrap;margin:8px 0 0}
-.badge{border:1px solid #334155;border-radius:999px;padding:6px 10px;font-size:14px;color:#cbd5e1}
-img{max-width:100%;height:auto;border-radius:12px}
-.pricing{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
-.price-card{background:var(--panel);border:1px solid #1f2937;border-radius:16px;padding:18px}
-.price{font-size:28px;margin:8px 0 0}
-.faq dt{font-weight:600;margin-top:12px}
-.faq dd{margin:4px 0 12px 0;color:#cbd5e1}
+:root{
+  --green-900:#1b5e20; --green-800:#2e7d32; --green-600:#43a047; --green-500:#66bb6a;
+  --green-300:#a5d6a7; --green-100:#e8f5e9; --text:#111111; --bg:#ffffff; --muted:#555; --shadow:0 10px 25px rgba(0,0,0,.07);
+}
+*{box-sizing:border-box} html{scroll-behavior:smooth}
+body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--text);background:var(--bg);line-height:1.6}
+.container{max-width:1120px;margin:0 auto;padding:0 1rem}
+.nav{position:sticky;top:0;z-index:10;background:#ffffffcc;backdrop-filter:blur(6px);border-bottom:1px solid #e7e7e7}
+.nav .inner{display:flex;align-items:center;justify-content:space-between;padding:.8rem 0}
+.logo{font-weight:800;letter-spacing:.5px}.logo span{color:var(--green-800)}
+.nav a{color:var(--text);text-decoration:none;margin-left:1rem;font-weight:600}.nav a.btn{padding:.55rem .9rem;border:2px solid var(--green-800);border-radius:10px;background:var(--green-300)}
+header.hero{padding:4rem 0 3rem;background:linear-gradient(180deg,var(--green-100),#fff);border-bottom:1px solid #e7e7e7}
+.hero-grid{display:grid;gap:1.2rem;grid-template-columns:1.25fr .9fr;align-items:center}
+@media (max-width:860px){.hero-grid{grid-template-columns:1fr}.portrait{order:-1;margin:0 auto}}
+.hero h1{font-size:clamp(2rem,3.6vw,3rem);margin:.2rem 0 .6rem}
+.hero p.lead{font-size:1.1rem;max-width:760px;margin:0 0 1rem}
+.badges{display:flex;flex-wrap:wrap;gap:.6rem;margin:1rem 0 0}
+.badge{border:1.8px solid var(--green-800);background:var(--green-100);padding:.35rem .6rem;border-radius:999px;font-weight:600;font-size:.9rem}
+.cta-row{display:flex;gap:.8rem;flex-wrap:wrap;margin-top:1rem}
+.btn{display:inline-block;text-decoration:none;color:var(--text);background:var(--green-300);border:2px solid var(--green-800);padding:.9rem 1.1rem;border-radius:12px;font-weight:800;box-shadow:var(--shadow)}
+.btn.secondary{background:#fff}
+.portrait{width:280px;height:280px;border-radius:50%;overflow:hidden;border:3px solid var(--green-800);box-shadow:var(--shadow)}
+.portrait img{width:100%;height:100%;object-fit:cover}
+section{padding:3rem 0} section h2{text-align:center;font-size:clamp(1.6rem,2.4vw,2.2rem);margin:0 0 1.2rem}
+.section-intro{max-width:840px;margin:.2rem auto 2rem;text-align:center;color:var(--muted)}
+.grid{display:grid;gap:1rem} .grid-3{grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.card{background:#fff;border:1px solid #e7e7e7;border-radius:14px;padding:1.1rem;box-shadow:var(--shadow)}
+.card h3{margin:.2rem 0 .4rem} .card p{margin:0;color:var(--muted)}
+.process{counter-reset:step}.process .step{position:relative;padding-left:3rem}
+.process .step::before{counter-increment:step;content:counter(step);position:absolute;left:0;top:.2rem;width:2rem;height:2rem;border-radius:999px;display:grid;place-items:center;background:var(--green-300);border:2px solid var(--green-800);font-weight:800}
+.portfolio{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.portfolio figure{margin:0;border:1px solid #e7e7e7;border-radius:14px;overflow:hidden;box-shadow:var(--shadow);background:#fff}
+.portfolio img{width:100%;aspect-ratio:16/9;object-fit:cover;background:#fafafa}
+.portfolio figcaption{padding:.8rem 1rem;font-weight:600}
+/* Portfolio meta list */ .portfolio .meta{list-style:none;margin:.4rem 0 0;padding:0}
+.portfolio .meta li{margin:.25rem 0;color:var(--muted)} .portfolio .meta b{color:var(--text)}
+.pricing{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.price-card{background:#fff;border:2px solid var(--green-300);border-radius:16px;padding:1.2rem;box-shadow:var(--shadow)}
+.price-card.highlight{border-color:var(--green-600);transform:translateY(-2px)} .price-card h3{margin:.2rem 0 .4rem}
+.price{font-size:1.8rem;font-weight:900;margin:.2rem 0 .8rem} .price small{font-weight:600;color:var(--muted)}
+.price-features{list-style:none;padding:0;margin:.6rem 0 1rem} .price-features li{margin:.3rem 0;padding-left:1.1rem;position:relative}
+.price-features li::before{content:'✓';position:absolute;left:0;color:var(--green-800);font-weight:900}
+.price-cta{display:block;text-align:center}
+.faq details{border:1px solid #e7e7e7;border-radius:12px;padding:.8rem 1rem;background:#fff;box-shadow:var(--shadow)}
+.faq details+details{margin-top:.6rem} .faq summary{cursor:pointer;font-weight:700}
+.contact .methods{display:flex;flex-wrap:wrap;gap:.8rem;justify-content:center;margin-top:1rem}
+.contact .methods a{min-width:200px;text-align:center}
+footer{border-top:1px solid #e7e7e7;background:#fff;padding:1.5rem 0;color:#444}
+footer .foot{display:flex;gap:1rem;flex-wrap:wrap;justify-content:space-between;align-items:center} footer .foot small{color:#777}
