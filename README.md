@@ -1,27 +1,33 @@
-# Landing di Giuseppe Lualdi — Freelance Web Designer
+# Aggiornamento prezzo "Starter" in grassetto + descrizione
 
-[![Visita il sito](https://img.shields.io/badge/Visita_il_sito-%20-2ea44f?style=for-the-badge)](https://giuppe5401-stack.github.io/)
+Questo pacchetto aggiorna la sezione "Starter" nel tuo sito GitHub Pages.
 
-Sito/landing per presentare servizi di **Web Design**, **SEO** e **Sviluppo Web** a piccole imprese e professionisti.
-
-## Come modificare
-- Apri `index.html` → **✏️ Edit** → salva con **Commit changes**.
-- Per immagini/testi aggiuntivi, caricali nella root o in una cartella dedicata (es. `/assets`).
-- Hard refresh del sito dopo ogni commit: **Ctrl/Cmd + Shift + R**.
-
-## SEO & Scoperta
-- `robots.txt` e `sitemap.xml` nella **root** (stessa cartella di `index.html`).
-- Aggiungi la proprietà in **Google Search Console** e invia `https://giuppe5401-stack.github.io/sitemap.xml`.
-- Metatag consigliati nel `<head>`:
-  ```html
-  <meta name="robots" content="index,follow">
-  <link rel="canonical" href="https://giuppe5401-stack.github.io/">
-  ```
-
-## Info utili
-- **Website (About della repo):** imposta il campo Website su `https://giuppe5401-stack.github.io/`
-- **Topics suggeriti:** `web-design`, `seo`, `freelance`, `landing-page`, `github-pages`
+## Modifiche automatiche
+- Prezzo mostrato come: `€ <strong>450</strong> una tantum`
+- Testo descrizione modificato da: `Landing 1–2 sezioni` → `Landing 1 sezione`
 
 ---
 
-© {datetime.date.today().year} Giuseppe Lualdi — Tutti i diritti riservati.
+## Opzione A — Modifica manuale su GitHub
+1. Apri `index.html` su GitHub.
+2. Trova la sezione del piano **Starter**.
+3. Sostituisci la riga del prezzo con:
+   ```html
+   € <strong>450</strong> una tantum
+   ```
+4. Sostituisci anche `Landing 1–2 sezioni` con `Landing 1 sezione`.
+5. Fai **Commit**.
+
+---
+
+## Opzione B — Usare gli script (locale)
+- macOS/Linux: `sed_update.sh`
+- Windows PowerShell: `powershell_update.ps1`
+
+Gli script faranno automaticamente:
+- Sostituzione descrizione
+- Aggiornamento prezzo Starter in formato con 450 in grassetto
+
+Backup: `index.html.bak`
+
+---
