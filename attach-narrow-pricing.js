@@ -20,6 +20,7 @@
   const cards = titles.map(findCard).filter(Boolean);
   cards.forEach(card => card.classList.add('pricing-card--narrow'));
 
+  // Trova il contenitore comune per applicare la griglia compatta
   function commonAncestor(nodes) {
     if (!nodes.length) return null;
     const paths = nodes.map(n => {
