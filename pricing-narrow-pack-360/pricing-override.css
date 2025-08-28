@@ -1,0 +1,59 @@
+/* pricing-override.css — versione più stretta */
+:root {
+  --card-max-width: 360px;  /* prima 420px */
+  --card-padding: 14px;     /* prima 16px */
+  --grid-gap: 16px;         /* prima 20px */
+  --card-scale: 1;
+}
+
+/* Griglia contenitore (aggiunta da JS) */
+.pricing-grid--narrow {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: var(--grid-gap);
+  align-items: start;
+}
+
+/* Card singola (aggiunta da JS) */
+.pricing-card--narrow {
+  max-width: var(--card-max-width);
+  padding: var(--card-padding) !important;
+  margin: 0 auto;
+  transform: scale(var(--card-scale));
+  transform-origin: top left;
+}
+
+/* Tipografia più compatta */
+.pricing-card--narrow h2,
+.pricing-card--narrow h3,
+.pricing-card--narrow h4,
+.pricing-card--narrow .price,
+.pricing-card--narrow .pricing-price {
+  line-height: 1.12;
+  margin-top: 0.2rem;
+  margin-bottom: 0.45rem;
+}
+
+/* Lista più stretta */
+.pricing-card--narrow ul { margin: 0.4rem 0 0.6rem; }
+.pricing-card--narrow li { margin: 0.2rem 0; }
+
+/* Pulsanti full width con padding ridotto */
+.pricing-card--narrow button,
+.pricing-card--narrow .btn,
+.pricing-card--narrow a.button,
+.pricing-card--narrow a.btn {
+  width: 100%;
+  padding-top: 0.7rem;
+  padding-bottom: 0.7rem;
+}
+
+/* Salvaguardia mobile: sotto 380px piena larghezza e gap più piccolo */
+@media (max-width: 380px) {
+  :root {
+    --grid-gap: 12px;
+  }
+  .pricing-card--narrow {
+    max-width: 100%;
+  }
+}
