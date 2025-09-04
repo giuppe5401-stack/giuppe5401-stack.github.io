@@ -3,131 +3,72 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>&WebLab — Docs deploy</title>
+  <title>&WebLab — Starter</title>
+  <meta name="description" content="Sito starter &WebLab: sfondo verde, testi neri in grassetto, struttura professionale.">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- HEADER -->
   <header class="site-header">
     <h1 class="logo">& <span>WebLab</span></h1>
+    <nav class="main-nav" aria-label="Menu principale">
+      <a href="#home">Home</a>
+      <a href="#servizi">Servizi</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#contatti">Contatti</a>
+    </nav>
   </header>
-  <main class="content">
-    <h2>Deploy via /docs ✅</h2>
-    <p>Se vedi questa pagina, GitHub Pages sta servendo correttamente dalla cartella <strong>/docs</strong>.</p>
-  </main>
-</body>
-</html>
-@@ -0,0 +1,33 @@
-<!doctype html>
-<html lang="it">
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Siti per commercialisti – Giuseppe Lualdi</title>
-<link rel="stylesheet" href="styles.css">
-<body>
 
-<header class="site">
-  <div class="container" style="display:flex;justify-content:space-between;align-items:center;">
-    <div><a href="index.html" style="font-weight:700;">Giuseppe Lualdi</a></div>
-    <nav>
-      <a href="servizi.html">Servizi</a>
-      <a href="portfolio.html">Portfolio</a>
-      <a class="btn" href="contatti.html">Contatti</a>
-    </nav>
-  </div>
-</header>
-
-<main class="container">
-  <h1>Siti per commercialisti</h1>
-  <p class="small">Presenta servizi e specializzazioni con FAQ e richieste preventivo veloci.</p>
-
-  <h2>Benefici</h2>
-  <ul><li>Struttura servizi/pacchetti</li><li>FAQ per ridurre email ripetitive</li><li>Modulo preventivo guidato</li><li>SEO locale</li></ul>
-
-  <h2>Funzionalità principali</h2>
-  <ul><li>Sezioni servizi con CTA</li><li>Moduli preventivo dinamici</li><li>FAQ con ricerca (opzionale)</li><li>Newsletter</li><li>SEO tecnico (schema.org)</li><li>Analytics base</li></ul>
-
-  <p><a href="contatti.html">Richiedi una consulenza gratuita</a></p>
-</main>
-<footer class="container">© 2025 Giuseppe Lualdi</footer>
-</body>
-</html>
-@@ -1,53 +1,28 @@
-<!doctype html>
-<html lang="it">
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Home – Giuseppe Lualdi</title>
-<link rel="stylesheet" href="styles.css">
-<body>
-
-<header class="site">
-  <div class="container" style="display:flex;justify-content:space-between;align-items:center;">
-    <div><a href="index.html" style="font-weight:700;">Giuseppe Lualdi</a></div>
-    <nav>
-      <a href="servizi.html">Servizi</a>
-      <a href="portfolio.html">Portfolio</a>
-      <a class="btn" href="contatti.html">Contatti</a>
-    </nav>
-  </div>
-</header>
-
-<main class="container">
-  <section class="hero">
-    <h1>Soluzioni web per studi professionali</h1>
-    <p class="small">Siti chiari, performanti e ottimizzati SEO.</p>
+  <!-- HERO -->
+  <section id="home" class="hero" aria-labelledby="titolo-hero">
+    <h2 id="titolo-hero">Titolo di benvenuto <span class="todo">[TODO: scrivi il claim]</span></h2>
+    <p class="subtitle">Sottotitolo breve e chiaro <span class="todo">[TODO: max 1 riga]</span></p>
+    <a class="cta" href="#contatti">Contattami</a>
   </section>
-  <section id="servizi" class="services">
-    <h2>Servizi per studi professionali</h2>
-    <p class="small">Siti per studi legali, commercialisti, studi medici ed e‑commerce.</p>
-    <div class="grid" style="margin-top:1rem;">
-      <div class="card">
-        <h3>Siti per studi legali</h3>
-        <p>Aree di competenza, case study e contatto rapido.</p>
-        <a class="link" href="studi-legali.html">Scopri di più →</a>
-      </div>
-      <div class="card">
-        <h3>Siti per commercialisti</h3>
-        <p>Servizi, piani, FAQ fiscali e richieste preventivo.</p>
-        <a class="link" href="commercialisti.html">Scopri di più →</a>
-      </div>
-      <div class="card">
-        <h3>Siti per studi medici</h3>
-        <p>Trattamenti, orari, contatto e indicazioni.</p>
-        <a class="link" href="studi-medici.html">Scopri di più →</a>
-      </div>
-      <div class="card">
-        <h3>Siti e‑commerce</h3>
-        <p>Catalogo prodotti, pagamenti sicuri e gestione ordini.</p>
-        <a class="link" href="ecommerce.html">Scopri di più →</a>
-      </div>
+
+  <!-- SERVIZI -->
+  <section id="servizi" class="servizi" aria-label="Servizi">
+    <article class="card">
+      <h3>🌐 Siti Web</h3>
+      <p><span class="todo">[TODO: descrivi il servizio in 1-2 frasi]</span></p>
+    </article>
+    <article class="card">
+      <h3>🚀 SEO</h3>
+      <p><span class="todo">[TODO: descrivi come migliori la visibilità]</span></p>
+    </article>
+    <article class="card">
+      <h3>📢 Pubblicità</h3>
+      <p><span class="todo">[TODO: descrivi campagne e risultati]</span></p>
+    </article>
+  </section>
+
+  <!-- PORTFOLIO -->
+  <section id="portfolio" class="portfolio" aria-label="Portfolio">
+    <h3>Portfolio</h3>
+    <div class="grid">
+      <div class="tile"><span class="todo">[TODO: progetto #1]</span></div>
+      <div class="tile"><span class="todo">[TODO: progetto #2]</span></div>
+      <div class="tile"><span class="todo">[TODO: progetto #3]</span></div>
     </div>
   </section>
-</main>
-<footer class="container">© 2025 Giuseppe Lualdi</footer>
-<head>
-<meta charset="utf-8">
-<title>Siti per studi professionali a Genova e provincia – Giuseppe Lualdi</title>
-<meta name="description" content="Realizzo siti per studi professionali a Genova e provincia: siti veloci, chiari, con SEO di base e assistenza.">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-</head>
-<body style="margin:0;background:#0b1220;color:#e5e7eb;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;line-height:1.6">
-  <nav style="display:flex;gap:16px;justify-content:flex-end;padding:12px 24px;border-bottom:1px solid #1f2937;background:rgba(15,23,42,.6);position:sticky;top:0">
-    <a href="/" style="color:#94a3b8;text-decoration:none">Home</a>
-    <a href="/about.html" style="color:#94a3b8;text-decoration:none">Chi sono</a>
-    <a href="/projects.html" style="color:#94a3b8;text-decoration:none">Portfolio</a>
-    <a href="#contatti" style="color:#94a3b8;text-decoration:none">Contatti</a>
-  </nav>
-  <header style="max-width:980px;margin:0 auto;padding:64px 24px;">
-    <h1 style="margin:0;font-size:clamp(28px,4vw,44px)">Siti per studi professionali a Genova e provincia</h1>
-    <div style="color:#94a3b8;margin-top:8px">Aiuto avvocati, commercialisti e studi medici a ottenere più contatti con siti veloci, chiari e GDPR‑ok.</div>
-  </header>
-  <main style="max-width:980px;margin:0 auto;padding:0 24px 24px">
-    <section id="contatti" style="background:#0f172a;border:1px solid #1f2937;border-radius:16px;padding:18px">
-      <h2>Contatti</h2>
-      <p><a href="mailto:giuppe5401@gmail.com" style="color:#e5e7eb;text-decoration:none;border:1px solid #334155;padding:10px 14px;border-radius:12px;display:inline-block">giuppe5401@gmail.com</a></p>
-    </section>
-  </main>
-  <footer style="padding:24px;color:#94a3b8;text-align:center;border-top:1px solid #1f2937;margin-top:24px">© Giuseppe Lualdi · Genova e provincia</footer>
+
+  <!-- CONTATTI -->
+  <footer id="contatti" class="footer" aria-label="Contatti">
+    <h3>Contatti</h3>
+    <p>📞 <strong>+39 347 944 1079</strong></p>
+    <p>✉️ <strong><span class="todo">[TODO: tua email]</span></strong></p>
+    <p>© <span id="year"></span> &WebLab</p>
+  </footer>
+
+  <!-- WHATSAPP BUTTON -->
+  <a class="whatsapp-fab" href="https://wa.me/393479441079" target="_blank" rel="noopener" aria-label="Chat su WhatsApp">
+    Chatta su WhatsApp
+  </a>
+
+  <script>
+    // Anno automatico
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
-@@ -1,3 +1,42 @@<html lang="it"><head><meta charset="utf-8"><title>Chi sono — giuppe5401</title><meta name="description" content="Chi è giuppe5401: percorso, competenze e obiettivi."><title>Chi sono — Giuseppe Lualdi</title><meta name="description" content="Chi è Giuseppe Lualdi: percorso, competenze e come lavoro."><link rel="canonical" href="https://giuppe5401-stack.github.io/about.html"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="style.css">@@ -12,25 +12,25 @@<nav class="container">  <a href="/">Home</a>  <a href="/about.html" aria-current="page">Chi sono</a>  <a href="/projects.html">Progetti</a>  <a href="/projects.html">Portfolio</a>  <a href="/#contatti">Contatti</a></nav>@@ -12,25 +12,25 @@<nav class="container">  <a href="/">Home</a>  <a href="/about.html" aria-current="page">Chi sono</a>  <a href="/#progetti">Progetti</a>  <a href="/projects.html">Progetti</a>  <a href="/#contatti">Contatti</a></nav><main class="container">  <article class="card">    <h1>Chi sono</h1>    <p>Ciao! Sono <strong>giuppe5401</strong>. Mi piace creare piccoli progetti web semplici, veloci e facili da mantenere, spesso pubblicati su GitHub Pages.</p>    <p>Ciao! Sono <strong>giuppe5401</strong>. Mi piace creare piccoli progetti web semplici, veloci e facili da mantenere, pubblicati su GitHub Pages.</p>    <h2>Competenze</h2>    <ul>      <li>HTML/CSS, un pizzico di JavaScript</li>      <li>GitHub Pages e automazioni semplici (sitemap con Actions)</li>      <li>GitHub Pages e automazioni (sitemap con Actions)</li>      <li>SEO base (title, description, sitemap, robots)</li>    </ul>    <h2>Obiettivi</h2>    <p>Imparare costantemente, pubblicare progetti utili e sperimentare nuove idee.</p>    <h2>Contatti</h2>    <p>Email: <a href="mailto:giuppe5401@gmail.com">giuppe5401@gmail.com</a></p>  </article></main><footer>© 2025 giuppe5401 • Sito su GitHub Pages</footer><footer>© 2025 giuppe5401 • <a href="/privacy.html">Privacy</a></footer></body></html>‎index.htmlCopy file name to clipboardExpand all lines: index.html<main class="container">  <article class="card">    <h1>Chi sono</h1>    <p>Ciao! Sono <strong>giuppe5401</strong>. Mi piace creare piccoli progetti web semplici, veloci e facili da mantenere, pubblicati su GitHub Pages.</p>    <p>Ciao! Sono <strong>Giuseppe Lualdi</strong>. Creo siti chiari e leggeri per studi professionali a Genova e provincia.</p>    <h2>Competenze</h2>    <ul>      <li>HTML/CSS, un pizzico di JavaScript</li>      <li>GitHub Pages e automazioni (sitemap con Actions)</li>      <li>SEO base (title, description, sitemap, robots)</li>      <li>Progettazione e testi semplici</li>      <li>SEO base e performance</li>      <li>GitHub Pages e automazioni (sitemap)</li>    </ul>    <h2>Contatti</h2>    <p>Email: <a href="mailto:giuppe5401@gmail.com">giuppe5401@gmail.com</a></p>  </article></main><footer>© 2025 giuppe5401 • <a href="/privacy.html">Privacy</a></footer><footer>© 2025 Giuseppe Lualdi · Genova e provincia • <a href="/privacy.html">Privacy</a></footer></body></html>
-0 commit commentsComments0 (0)Lock conversationCommentSubscribeYou're not receiving notifications from this thread.
