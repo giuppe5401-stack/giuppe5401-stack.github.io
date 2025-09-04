@@ -2,27 +2,95 @@
 <html lang="it">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>&WebLab</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Marco Rossi - Freelance Web Designer</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      background-color: #f8f8f8;
+      color: #333;
+    }
+    header {
+      background-color: #4CAF50;
+      color: white;
+      padding: 2rem;
+      text-align: center;
+    }
+    section {
+      padding: 2rem;
+      max-width: 900px;
+      margin: auto;
+    }
+    h1, h2 {
+      margin-bottom: 1rem;
+    }
+    .services {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    .service {
+      background-color: white;
+      padding: 1rem;
+      border-radius: 8px;
+      flex: 1 1 calc(33% - 2rem);
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #eee;
+      margin-top: 2rem;
+    }
+    a {
+      color: #4CAF50;
+      text-decoration: none;
+    }
+  </style>
 </head>
 <body>
-  <header class="site-header">
-    <h1 class="logo">& <span>WebLab</span></h1>
-  </header>
 
-  <main class="content">
-    <h2>Benvenuto!</h2>
-    <p>Scrivimi su WhatsApp quando vuoi 🙂</p>
-  </main>
+<header>
+  <h1>Giuseppe Lualdi</h1>
+  <p>Freelance Web Designer | Creo esperienze digitali che fanno la differenza</p>
+</header>
 
-  <!-- Bottone WhatsApp fluttuante -->
-  <a class="whatsapp-fab" href="https://wa.me/393479441079" target="_blank" rel="noopener" aria-label="Chatta su WhatsApp">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="26" height="26" aria-hidden="true">
-      <path d="M19.11 17.19c-.28-.14-1.65-.81-1.9-.9-.26-.1-.45-.14-.64.14-.19.28-.73.9-.9 1.09-.17.19-.33.21-.61.07-.28-.14-1.16-.43-2.21-1.37-.82-.73-1.37-1.63-1.53-1.91-.16-.28-.02-.43.12-.57.13-.13.28-.33.42-.5.14-.17.19-.28.28-.47.09-.19.05-.36-.02-.5-.07-.14-.64-1.54-.88-2.11-.23-.56-.47-.48-.64-.49-.17-.01-.36-.01-.55-.01s-.5.07-.76.36c-.26.28-1 1-1 2.43 0 1.43 1.02 2.81 1.16 3 .14.19 2 3.05 4.84 4.28.68.29 1.22.46 1.64.59.69.22 1.32.19 1.82.12.56-.08 1.65-.67 1.88-1.32.23-.65.23-1.21.16-1.32-.06-.11-.25-.17-.53-.31zM16.07 5.33c-5.84 0-10.58 4.74-10.58 10.58 0 1.86.5 3.6 1.38 5.1L5.33 26.67l5.8-1.52c1.46.8 3.13 1.26 4.93 1.26 5.84 0 10.58-4.74 10.58-10.58s-4.74-10.5-10.58-10.5zm0 19.2c-1.7 0-3.28-.5-4.6-1.36l-.33-.21-3.44.9.92-3.35-.22-.34c-.84-1.33-1.33-2.9-1.33-4.6 0-4.74 3.86-8.6 8.6-8.6s8.6 3.86 8.6 8.6-3.86 8.6-8.6 8.6z"/>
-    </svg>
-    <span>Chatta su WhatsApp</span>
-  </a>
+<section>
+  <h2>Chi sono</h2>
+  <p>Ciao! Sono Giuseppe, freelance specializzato in Web Design e sviluppo Front-end. Aiuto aziende e professionisti a creare siti web moderni e intuitivi che aumentano la loro visibilità online e le conversioni.</p>
+</section>
+
+<section>
+  <h2>I miei servizi</h2>
+  <div class="services">
+    <div class="service">
+      <h3>Sviluppo Web</h3>
+      <p>Realizzo siti web responsive e performanti, ottimizzati per visibilità e conversioni.</p>
+    </div>
+    <div class="service">
+      <h3>Web Design</h3>
+      <p>Creo design moderni e intuitivi che valorizzano il brand e migliorano l’esperienza utente.</p>
+    </div>
+    <div class="service">
+      <h3>Branding</h3>
+      <p>Aiuto a sviluppare identità visive uniche, coerenti e memorabili per il tuo business.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Connettiamoci su LinkedIn</h2>
+  <p><a href="https://www.linkedin.com" target="_blank">Visita il mio LinkedIn</a></p>
+</section>
+
+<footer>
+  <p>© 2025 Marco Rossi - Freelance Web Designer. Tutti i diritti riservati.</p>
+</footer>
+
 </body>
 </html>
+
