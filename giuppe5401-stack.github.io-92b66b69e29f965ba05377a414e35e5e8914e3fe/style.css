@@ -1,25 +1,67 @@
+:root{
+  --green: #008000;
+  --green-dark: #006600;
+  --white: #ffffff;
+  --black: #000000;
+}
+*{ box-sizing: border-box; }
+html, body{ height: 100%; margin: 0; }
+body{
+  background: var(--green);
+  font-family: 'Poppins', system-ui, -apple-system, Arial, sans-serif;
+  color: var(--white);
+}
+.site-header{
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background: var(--green-dark);
+  padding: 12px 24px;
+  display: flex;
+  justify-content: flex-end;    /* tutto a destra */
+  align-items: center;
+  gap: 24px;                    /* spazio tra menu e logo */
+}
+.logo{
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--black);          /* & nero */
+  line-height: 1;
+  white-space: nowrap;
+}
+.logo span{ color: var(--white); } /* WebLab bianco */
 
-:root{--bg:#0b1220;--panel:#0f172a;--text:#e5e7eb;--muted:#94a3b8}
-*{box-sizing:border-box}
-html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial,sans-serif;line-height:1.6}
-.container{max-width:980px;margin:0 auto;padding:24px}
-nav{display:flex;gap:16px;justify-content:flex-end;padding:12px 24px;border-bottom:1px solid #1f2937;background:rgba(15,23,42,.6);backdrop-filter:blur(8px);position:sticky;top:0}
-nav a{color:var(--muted);text-decoration:none}
-nav a:hover{color:#fff}
-.hero{display:grid;gap:16px;place-items:start;padding:64px 24px}
-h1{font-size:clamp(28px,4vw,44px);margin:0}
-.tag{color:var(--muted)}
-.cta{display:inline-block;margin-top:12px;padding:10px 14px;border:1px solid #334155;border-radius:12px;text-decoration:none;color:#e5e7eb}
-.cta:hover{background:#111827}
-.grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
-.card{background:var(--panel);border:1px solid #1f2937;border-radius:16px;padding:18px}
-.card h3{margin-top:0}
-footer{padding:24px;color:var(--muted);text-align:center;border-top:1px solid #1f2937;margin-top:24px}
-.badges{display:flex;gap:10px;flex-wrap:wrap;margin:8px 0 0}
-.badge{border:1px solid #334155;border-radius:999px;padding:6px 10px;font-size:14px;color:#cbd5e1}
-img{max-width:100%;height:auto;border-radius:12px}
-.pricing{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
-.price-card{background:var(--panel);border:1px solid #1f2937;border-radius:16px;padding:18px}
-.price{font-size:28px;margin:8px 0 0}
-.faq dt{font-weight:600;margin-top:12px}
-.faq dd{margin:4px 0 12px 0;color:#cbd5e1}
+.main-nav{
+  display: flex;
+  gap: 18px;
+}
+.main-nav a{
+  color: var(--white);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1rem;
+  opacity: .9;
+}
+.main-nav a:hover,
+.main-nav a:focus{
+  text-decoration: underline;
+  opacity: 1;
+}
+
+.content{
+  padding: 24px;
+  max-width: 920px;
+}
+.section{ margin-top: 40px; }
+
+/* Mobile: menu va a capo sopra il logo ma resta a destra */
+@media (max-width: 520px){
+  .site-header{
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 8px 16px;
+  }
+  .logo{ font-size: 1.6rem; }
+  .main-nav a{ font-size: .95rem; }
+}
