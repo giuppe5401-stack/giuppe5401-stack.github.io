@@ -1,13 +1,17 @@
 :root{
   --green: #008000;
   --green-dark: #006600;
+  --white: #ffffff;
+  --black: #000000;
+  --wa: #25D366;           /* colore WhatsApp */
+  --wa-dark: #1EBE58;      /* hover */
 }
 *{ box-sizing: border-box; }
 html, body{ height: 100%; margin: 0; }
 body{
   background: var(--green);
   font-family: 'Poppins', system-ui, -apple-system, Arial, sans-serif;
-  color: #ffffff;
+  color: var(--white);
 }
 .site-header{
   position: sticky;
@@ -23,9 +27,48 @@ body{
   margin: 0;
   font-size: 2rem;
   font-weight: 700;
-  color: #000; /* & nero */
+  color: var(--black); /* & nero */
   line-height: 1;
   white-space: nowrap;
 }
-.logo span{ color:#fff; } /* WebLab bianco */
-.content{ padding:24px; }
+.logo span{ color: var(--white); } /* WebLab bianco */
+.content{
+  padding: 24px;
+}
+
+/* FAB WhatsApp */
+.whatsapp-fab{
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--wa);
+  color: #082b10;
+  font-weight: 700;
+  text-decoration: none;
+  padding: 12px 16px;
+  border-radius: 999px;
+  box-shadow: 0 8px 18px rgba(0,0,0,.2);
+  transition: transform .08s ease, background .15s ease, box-shadow .2s ease;
+}
+.whatsapp-fab:hover{
+  background: var(--wa-dark);
+  transform: translateY(-1px);
+  box-shadow: 0 12px 22px rgba(0,0,0,.25);
+}
+.whatsapp-fab svg{
+  display: block;
+  fill: currentColor;
+}
+.whatsapp-fab span{
+  display: inline-block;
+  line-height: 1;
+  color: #ffffff;
+}
+
+/* Mobile: solo icona se lo spazio è poco */
+@media (max-width: 420px){
+  .whatsapp-fab span{ display: none; }
+}
