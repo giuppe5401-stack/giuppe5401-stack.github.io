@@ -204,3 +204,31 @@ body::before {
   .side-buttons { display: none !important; }
   body.sb-open .side-buttons { display: flex !important; }
 }
+
+
+/* === Mobile optimization pass === */
+html { scroll-behavior: smooth; }
+.logo span { white-space: nowrap; }
+
+@media (max-width: 640px) {
+  .navbar { padding: 10px 12px; }
+  .navbar nav a { display: none; } /* hide nav links on small screens */
+  .logo-img { height: 28px; }
+  .hero { padding: 2.8rem 1rem 2rem; }
+  .hero-brand-text { font-size: clamp(22px, 8vw, 32px) !important; }
+  .hero h1 { font-size: clamp(26px, 8vw, 36px); line-height: 1.15; margin-top: .25rem; }
+  .hero p { font-size: 16px; opacity: .92; }
+  .buttons { display: grid; grid-template-columns: 1fr; gap: 12px; }
+  .btn { width: 100%; padding: 14px 16px; font-size: 16px; border-radius: 12px; }
+  .cards { grid-template-columns: 1fr; gap: 1rem; }
+  .side-buttons { top: 72px; }
+  .sb-toggle { top: 10px; right: 10px; border-radius: 16px; }
+}
+
+/* Improve tap targets */
+.btn, .side-btn, .sb-toggle { min-height: 44px; } 
+
+/* Reduce grid overlay intensity on small screens to improve readability */
+@media (max-width: 640px) {
+  body::before { opacity: .7; }
+}
