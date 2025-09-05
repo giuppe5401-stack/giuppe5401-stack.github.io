@@ -38,3 +38,45 @@ a { color: #065f46; }
   background: #333;
   color: #fff;
 }
+/* Sezione Listino Prezzi */
+#prezzi {
+  padding: 60px 20px;
+  background-color: #f9f9f9;
+  border-top: 1px solid #ddd;
+  text-align: center;
+}
+
+#prezzi h2 {
+  font-size: 28px;
+  margin-bottom: 30px;
+  color: #222;
+}
+
+/* Tabella prezzi */
+#prezzi table {
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+  border-collapse: collapse;
+  font-size: 18px;
+}
+
+#prezzi th,
+#prezzi td {
+  padding: 15px;
+  border: 1px solid #ddd;
+}
+
+#prezzi th {
+  background-color: #000;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+#prezzi tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+#prezzi tr:hover {
+  background-color: #eaeaea;
+}
