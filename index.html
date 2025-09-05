@@ -9,13 +9,13 @@
 <link href="favicon.ico" rel="icon" type="image/x-icon"/><link href="favicon-32.png" rel="icon" sizes="32x32" type="image/png"/><link href="apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/></head>
 <body>
 <header class="navbar">
-
+<div class="logo"><img alt="&amp;WebLab logo" class="logo-img" src="logo.png"/><span>&amp;WebLab</span></div>
 <nav>
 <a href="#servizi">Servizi</a>
 <a href="#contatti">Contatti</a>
 <a href="https://www.linkedin.com/in/giuseppe-lualdi-54346a320" target="_blank">LinkedIn</a>
 </nav>
-</header>
+<button aria-controls="mobile-drawer mobile-backdrop" aria-expanded="false" class="menu-toggle">☰ Menu</button></header>
 <section class="hero">
 <div class="hero-brand"><span class="hero-brand-text">&amp;WebLab</span></div><h1>Servizi digitali che fanno crescere il tuo business</h1>
 <p>Landing page, SEO, campagne Ads e soluzioni su misura.</p>
@@ -35,7 +35,7 @@
 <h3>Studio Commercialista</h3>
 <p>Landing chiara con CTA WhatsApp per richieste preventive.</p>
 </div>
-<div class="card"><h3>Creazioni Codici QR</h3><p>Generazione di QR personalizzati per menu, volantini, biglietti da visita, pagamenti e link tracciabili.</p></div><div class="card"><h3>Dentisti</h3><p>Landing “Prenota visita” + Local SEO e Google Ads con estensioni chiamata.</p></div></div>
+<div class="card"><h3>Creazioni Codici QR</h3><p>Generazione di QR personalizzati per menu, volantini, biglietti da visita, pagamenti e link tracciabili.</p></div></div>
 </section>
 <section class="contatti" id="contatti">
 <h2>Parliamo del tuo progetto</h2>
@@ -49,5 +49,21 @@
 <footer class="footer">
 <p>© 2025 &amp;WebLab — Tutti i diritti riservati</p>
 </footer>
-</body>
+<nav class="mobile-drawer" id="mobile-drawer"><div class="drawer-header">&amp;WebLab</div><ul class="drawer-links"><li><a class="drawer-link" href="#servizi">Servizi</a></li><li><a class="drawer-link" href="#contatti">Contatti</a></li><li><a class="drawer-link" href="https://www.linkedin.com/in/giuseppe-lualdi-54346a320" rel="noopener" target="_blank">LinkedIn</a></li><li><a class="drawer-link" href="https://wa.me/393479441079" rel="noopener" target="_blank">WhatsApp</a></li><li><a class="drawer-link" href="tel:+393479441079">Chiama</a></li><li><a class="drawer-link" href="mailto:giuppe5401@gmail.com">Email</a></li></ul></nav><div aria-hidden="true" class="drawer-backdrop" id="mobile-backdrop"></div><script>
+(function(){
+  var btn = document.querySelector('.menu-toggle');
+  var backdrop = document.getElementById('mobile-backdrop');
+  function toggle(force){
+    var open = typeof force==='boolean' ? force : !document.body.classList.contains('menu-open');
+    document.body.classList.toggle('menu-open', open);
+    if(btn){ btn.setAttribute('aria-expanded', open); }
+  }
+  if(btn){
+    btn.addEventListener('click', function(){ toggle(); });
+    btn.addEventListener('keydown', function(e){ if(e.key==='Enter'||e.key===' '){ e.preventDefault(); toggle(); } });
+  }
+  if(backdrop){ backdrop.addEventListener('click', function(){ toggle(false); }); }
+  document.addEventListener('keydown', function(e){ if(e.key==='Escape'){ toggle(false); } });
+})();
+</script></body>
 </html>

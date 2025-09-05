@@ -400,3 +400,67 @@ body.menu-open .drawer-backdrop { opacity: 1; pointer-events: auto; }
 /* Remove-logo adjustments */
 .logo { gap: 0.4rem; }
 .logo-img { display: none !important; }
+
+
+/* === Smartphone Optimization v3 === */
+:root {
+  --nav-h: 56px;
+  --padx: max(14px, env(safe-area-inset-left));
+  --padxr: max(14px, env(safe-area-inset-right));
+  --padt: max(10px, env(safe-area-inset-top));
+  --padb: max(10px, env(safe-area-inset-bottom));
+}
+html, body { overflow-x: hidden; }
+section { scroll-margin-top: calc(var(--nav-h) + 12px); }
+
+/* Header layout without left logo */
+.navbar { min-height: var(--nav-h); display:flex; align-items:center; justify-content: space-between; }
+.navbar nav { display:flex; gap: 14px; }
+
+/* Drawer toggle on phones */
+@media (max-width: 640px) {
+  .navbar { padding: 8px var(--padxr) 8px var(--padx); }
+  .navbar nav a { display: none !important; } /* use drawer instead */
+  .menu-toggle { display: inline-block; }      /* ensure visible */
+}
+
+/* Hero sizing on small screens */
+@media (max-width: 640px) {
+  .hero { padding: 2.1rem var(--padx) 1.6rem; }
+  .hero-brand-text { font-size: clamp(22px, 8.2vw, 32px) !important; line-height: 1.1; }
+  .hero h1 { font-size: clamp(24px, 7.6vw, 34px); line-height: 1.2; margin: .4rem 0 .7rem; }
+  .hero p { font-size: 16px; opacity: .96; max-width: 30ch; margin: 0 auto; }
+  .buttons { display:grid; grid-template-columns: 1fr; gap: 12px; margin-top: 14px; }
+  .btn { width: 100%; padding: 14px 16px; font-size: 16px; border-radius: 14px; }
+}
+
+/* Services & cards */
+@media (max-width: 640px) {
+  .servizi { padding: 2rem var(--padx); }
+  .cards { grid-template-columns: 1fr; gap: 12px; }
+  .card { padding: 14px; border-radius: 14px; }
+}
+
+/* Contacts */
+@media (max-width: 640px) {
+  .contatti { padding: 2rem var(--padx); }
+  .contact-buttons { grid-template-columns: 1fr; gap: 12px; }
+}
+
+/* Side buttons + floating toggle */
+.sb-toggle { z-index: 10000; }
+@media (max-width: 640px) {
+  .sb-toggle { 
+    position: fixed; right: var(--padxr); bottom: calc(12px + var(--padb));
+    width: 56px; height: 56px; border-radius: 999px; padding: 0; font-size: 20px;
+    display: inline-flex; align-items:center; justify-content:center;
+  }
+  .side-buttons { top: auto; bottom: calc(80px + var(--padb)); }
+  .side-buttons.left { left: var(--padx); }
+  .side-buttons.right { right: var(--padxr); }
+}
+
+/* Reduce motion for users preferring it */
+@media (prefers-reduced-motion: reduce) {
+  * { animation-duration: .001ms !important; animation-iteration-count: 1 !important; transition-duration: .001ms !important; scroll-behavior: auto !important; }
+}
