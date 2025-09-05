@@ -1,1 +1,269 @@
+import React from "react";
+import { motion } from "framer-motion";
+import {
+  Monitor,
+  Search,
+  Megaphone,
+  ShoppingCart,
+  BarChart3,
+  Brush,
+  Wrench,
+  Globe,
+  MessageSquareQuote,
+  CheckCircle2,
+  ChevronRight,
+  Mail,
+  Phone,
+  Linkedin
+} from "lucide-react";
+import Image from "next/image";
+
+// Componenti UI minimi
+const cn = (...classes) => classes.filter(Boolean).join(" ");
+
+function Button({ children, href, onClick, className = "", variant = "black", size = "md", icon: Icon, as = "a", ...props }) {
+  const base = "inline-flex items-center justify-center font-medium rounded-2xl transition-all focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-400";
+  const sizes = { sm: "text-sm px-3 py-2", md: "text-base px-5 py-3", lg: "text-lg px-6 py-3.5" };
+  const variants = {
+    black: "bg-black text-white hover:bg-black/85",
+    ghost: "bg-transparent text-black border border-black hover:bg-black hover:text-white",
+    white: "bg-white text-black hover:bg-white/90"
+  };
+  const Comp = as;
+  return (
+    <Comp href={href} onClick={onClick} className={cn(base, sizes[size], variants[variant], className)} {...props}>
+      {Icon && <Icon className="mr-2 h-5 w-5" aria-hidden />}
+      {children}
+    </Comp>
+  );
+}
+
+function Card({ children, className = "" }) {
+  return <div className={cn("rounded-2xl bg-white/95 shadow-xl ring-1 ring-black/5", className)}>{children}</div>;
+}
+
+function CardHeader({ children, className = "" }) {
+  return <div className={cn("p-6 pb-0", className)}>{children}</div>;
+}
+
+function CardContent({ children, className = "" }) {
+  return <div className={cn("p-6", className)}>{children}</div>;
+}
+
+function Badge({ children }) {
+  return <span className="inline-flex items-center gap-2 rounded-full bg-emerald-100 px-3 py-1 text-sm font-medium text-emerald-900 ring-1 ring-inset ring-emerald-300">{children}</span>;
+}
+
+const fadeUp = {
+  initial: { opacity: 0, y: 20 },
+  animate: { opacity: 1, y: 0 },
+  transition: { duration: 0.6, ease: "easeOut" }
+};
+
+export default function LandingPage() {
+  return (
+    <div className="min-h-screen bg-emerald-950 text-white">
+      {/* Background */}
+      <div className="pointer-events-none fixed inset-0 -z-10">
+        <div className="absolute inset-0 bg-gradient-to-b from-emerald-900/80 via-emerald-950/90 to-black" />
+        <div className="absolute -top-32 -left-32 h-96 w-96 rounded-full bg-emerald-700/20 blur-3xl" />
+        <div className="absolute top-1/3 -right-24 h-96 w-96 rounded-full bg-emerald-600/20 blur-3xl" />
+      </div>
+
+      {/* NAVBAR */}
+      <header className="sticky top-0 z-40 backdrop-blur-md bg-emerald-950/60 border-b border-white/10">
+        <nav className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3">
+          <a href="#home" className="flex items-center gap-3">
+            <div className="flex h-10 w-auto items-center justify-center">
+              <Image src="/62cb8c39-bf29-4aa0-85ab-3bb935b603d7.png" alt="&WebLab" width={120} height={40} />
+            </div>
+            <span className="text-lg font-semibold tracking-tight">&WebLab</span>
+          </a>
+          <div className="hidden items-center gap-6 md:flex">
+            <a href="#servizi" className="text-white/90 hover:text-white">Servizi</a>
+            <a href="#metodo" className="text-white/90 hover:text-white">Metodo</a>
+            <a href="#prezzi" className="text-white/90 hover:text-white">Prezzi</a>
+            <a href="#faq" className="text-white/90 hover:text-white">FAQ</a>
+            <Button href="#contatti" variant="black" size="sm">Contattaci</Button>
+            <Button href="https://www.linkedin.com/in/giuseppe-lualdi-54346a320" variant="ghost" size="sm" icon={Linkedin}>LinkedIn</Button>
+          </div>
+        </nav>
+      </header>
+
+      {/* HERO */}
+      <section id="home" className="relative">
+        <div className="mx-auto grid max-w-7xl items-center gap-10 px-4 py-16 md:grid-cols-2 md:py-24">
+          <motion.div {...fadeUp}>
+            <Badge>
+              <CheckCircle2 className="h-4 w-4" /> Risultati misurabili, niente fumo
+            </Badge>
+            <h1 className="mt-6 text-4xl font-extrabold leading-tight tracking-tight sm:text-5xl">
+              Servizi digitali che fanno crescere il tuo business
+            </h1>
+            <p className="mt-4 text-white/80 text-lg">
+              Progettiamo <strong>siti web</strong>, <strong>landing page</strong>, <strong>SEO</strong> e
+              <strong> campagne Google &amp; Social</strong>. Dalla strategia all'acquisizione clienti, con
+              report chiari e trasparenti.
+            </p>
+            <div className="mt-8 flex flex-wrap gap-4">
+              <Button href="#contatti" variant="black" size="lg" icon={Mail}>Richiedi un preventivo</Button>
+              <Button href="#contatti" variant="ghost" size="lg" icon={Phone}>Parla con noi</Button>
+            </div>
+            <ul className="mt-6 grid grid-cols-1 gap-3 text-sm text-white/80 sm:grid-cols-2">
+              {["Strategia su misura","Ottimizzazione continua","Trasparenza sui costi","Assistenza rapida"].map((item) => (
+                <li key={item} className="flex items-center gap-2">
+                  <CheckCircle2 className="h-5 w-5 text-emerald-300" /> {item}
+                </li>
+              ))}
+            </ul>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* SERVIZI & ESEMPI */}
+      <section id="servizi" className="relative border-t border-white/10 py-16 md:py-24">
+        <div className="mx-auto max-w-7xl px-4">
+          <motion.h2 {...fadeUp} className="text-3xl font-bold sm:text-4xl">Servizi con esempi reali</motion.h2>
+          <p className="mt-2 max-w-2xl text-white/80">Selezione di attività su cui stai lavorando o che vuoi proporre.</p>
+
+          <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            <Card className="border border-white/10">
+              <CardHeader>
+                <div className="flex items-center gap-3">
+                  <div className="rounded-xl bg-black p-2"><Search className="h-5 w-5 text-white"/></div>
+                  <h3 className="text-xl font-semibold text-emerald-50">Erboristeria locale</h3>
+                </div>
+              </CardHeader>
+              <CardContent>
+                <p className="text-sm text-white/80">Landing page + Local SEO per prodotti come <em>citrullina</em> e <em>zinco</em> in polvere/pastiglie. Obiettivo: chiamate e visite in negozio.</p>
+                <ul className="mt-4 grid gap-2 text-sm text-white/85">
+                  <li className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-emerald-300"/> Scheda Google Business ottimizzata</li>
+                  <li className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-emerald-300"/> Annunci local con estensioni chiamata</li>
+                </ul>
+              </CardContent>
+            </Card>
+
+            <Card className="border border-white/10">
+              <CardHeader>
+                <div className="flex items-center gap-3">
+                  <div className="rounded-xl bg-black p-2"><Megaphone className="h-5 w-5 text-white"/></div>
+                  <h3 className="text-xl font-semibold text-emerald-50">Carrozzeria</h3>
+                </div>
+              </CardHeader>
+              <CardContent>
+                <p className="text-sm text-white/80">Campagne Google Ads + landing con modulo rapido per <strong>preventivo danni</strong> e <strong>ritiro a domicilio</strong>.</p>
+                <ul className="mt-4 grid gap-2 text-sm text-white/85">
+                  <li className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-emerald-300"/> Tracciamento conversioni (chiamate/modulo)</li>
+                  <li className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-emerald-300"/> Annunci ricerca + local</li>
+                </ul>
+              </CardContent>
+            </Card>
+
+            <Card className="border border-white/10">
+              <CardHeader>
+                <div className="flex items-center gap-3">
+                  <div className="rounded-xl bg-black p-2"><Monitor className="h-5 w-5 text-white"/></div>
+                  <h3 className="text-xl font-semibold text-emerald-50">Studio Commercialista</h3>
+                </div>
+              </CardHeader>
+              <CardContent>
+                <p className="text-sm text-white/80">Landing “servizi fiscali” con sezioni chiare e CTA WhatsApp per richieste preventivo senza chiamare.</p>
+                <ul className="mt-4 grid gap-2 text-sm text-white/85">
+                  <li className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-emerald-300"/> Pagine servizio SEO-friendly</li>
+                  <li className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-emerald-300"/> Test A/B su form e CTA</li>
+                </ul>
+              </CardContent>
+            </Card>
+
+            <Card className="border border-white/10">
+              <CardHeader>
+                <div className="flex items-center gap-3">
+                  <div className="rounded-xl bg-black p-2"><Wrench className="h-5 w-5 text-white"/></div>
+                  <h3 className="text-xl font-semibold text-emerald-50">Pubblica Assistenza</h3>
+                </div>
+              </CardHeader>
+              <CardContent>
+                <p className="text-sm text-white/80">Sito con <strong>landing pubblica</strong> + <strong>area riservata</strong> per personale: turni, gestione mezzi, indicazioni operative.</p>
+                <ul className="mt-4 grid gap-2 text-sm text-white/85">
+                  <li className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-emerald-300"/> Accesso tramite login</li>
+                  <li className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-emerald-300"/> Struttura scalabile per moduli futuri</li>
+                </ul>
+              </CardContent>
+            </Card>
+
+          <div className="mt-10 flex flex-wrap items-center gap-4">
+            <Button href="#contatti" variant="black" size="md" icon={ChevronRight}>Parliamo del tuo progetto</Button>
+            <span className="text-sm text-white/70">Preventivi rapidi, senza impegno</span>
+          </div>
+        </div>
+      </section>
+
+      {/* CONTATTI */}
+      <section id="contatti" className="relative border-t border-white/10 py-16 md:py-24">
+        <div className="mx-auto max-w-5xl px-4">
+          <motion.h2 {...fadeUp} className="text-3xl font-bold sm:text-4xl">Parliamo del tuo progetto</motion.h2>
+          <p className="mt-2 max-w-2xl text-white/80">Raccontaci obiettivi e tempi: rispondiamo velocemente con una proposta chiara.</p>
+
+          <div className="mt-8 grid gap-6 md:grid-cols-2">
+            <Card className="border border-white/10">
+              <CardContent>
+                <form className="grid gap-4">
+                  <label className="grid gap-2">
+                    <span className="text-sm text-white/80">Nome</span>
+                    <input type="text" placeholder="Il tuo nome" className="w-full rounded-xl border border-white/15 bg-white/95 px-4 py-3 text-emerald-950 placeholder-emerald-700/60 focus:border-emerald-400 focus:outline-none" />
+                  </label>
+                  <label className="grid gap-2">
+                    <span className="text-sm text-white/80">Email</span>
+                    <input type="email" placeholder="tuo@email.it" className="w-full rounded-xl border border-white/15 bg-white/95 px-4 py-3 text-emerald-950 placeholder-emerald-700/60 focus:border-emerald-400 focus:outline-none" />
+                  </label>
+                  <label className="grid gap-2">
+                    <span className="text-sm text-white/80">Messaggio</span>
+                    <textarea placeholder="Raccontaci di cosa hai bisogno" rows={5} className="w-full resize-none rounded-xl border border-white/15 bg-white/95 px-4 py-3 text-emerald-950 placeholder-emerald-700/60 focus:border-emerald-400 focus:outline-none" />
+                  </label>
+                  <div className="flex items-center justify-between gap-3">
+                    <label className="flex items-center gap-2 text-sm text-white/80">
+                      <input type="checkbox" className="h-4 w-4 rounded border-white/20 bg-transparent" />
+                      Accetto l'informativa privacy
+                    </label>
+                    <Button as="button" type="submit" variant="black" size="md">Invia richiesta</Button>
+                  </div>
+                </form>
+              </CardContent>
+            </Card>
+
+            <div className="space-y-6">
+              <Card className="border border-white/10">
+                <CardContent>
+                  <h3 className="text-lg font-semibold">Contatti</h3>
+                  <div className="mt-4 grid gap-3 text-white/90">
+                    <div className="flex items-center gap-3"><Phone className="h-5 w-5 text-emerald-300"/><a href="tel:+393479441079">+39 347 944 1079</a></div>
+                    <div className="flex items-center gap-3"><Mail className="h-5 w-5 text-emerald-300"/><a href="mailto:giuppe5401@gmail.com">giuppe5401@gmail.com</a></div>
+                    <div className="flex items-center gap-3"><Linkedin className="h-5 w-5 text-emerald-300"/><a href="https://www.linkedin.com/in/giuseppe-lualdi-54346a320" target="_blank" className="hover:underline">Profilo LinkedIn</a></div>
+                  </div>
+                  <div className="mt-6 flex flex-wrap gap-3">
+                    <Button href="https://wa.me/393479441079" variant="black">Scrivi su WhatsApp</Button>
+                    <Button href="mailto:giuppe5401@gmail.com" variant="ghost">Manda una mail</Button>
+                    <Button href="https://www.linkedin.com/in/giuseppe-lualdi-54346a320" variant="ghost" icon={Linkedin}>LinkedIn</Button>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FOOTER */}
+      <footer className="border-t border-white/10 py-8">
+        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-4 sm:flex-row">
+          <p className="text-white/60">© {new Date().getFullYear()} &WebLab — Tutti i diritti riservati</p>
+          <div className="flex items-center gap-4 text-sm text-white/70">
+            <a href="#" className="hover:text-white">Privacy</a>
+            <a href="#" className="hover:text-white">Cookie</a>
+            <a href="#contatti" className="hover:text-white">Contatti</a>
+          </div>
+        </div>
+      </footer>
+    </div>
+  );
+}
 
