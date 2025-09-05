@@ -1,1 +1,82 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>&WebLab — Soluzioni Web Professionali</title>
+  <meta name="description" content="&WebLab: siti web moderni, SEO efficace e campagne pubblicitarie che portano risultati.">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- HEADER -->
+  <header class="site-header">
+    <h1 class="logo">& <span>WebLab</span></h1>
+    <nav class="main-nav" aria-label="Menu principale">
+      <a href="#home">Home</a>
+      <a href="#servizi">Servizi</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#contatti">Contatti</a>
+    </nav>
+    <h1 class="logo">
+ <img
+   src="assets/logo/logo-weblab-200.png"
+      <srcset="assets/logo/logo-weblab-200.png 1x, assets/logo/logo-weblab-400.png 2x"
+      alt="& WebLab logo"
+      class="site-logo"
+       />
+  </h1>
+  </header>
 
+  <!-- HERO -->
+  <section id="home" class="hero" aria-labelledby="titolo-hero">
+    <h2 id="titolo-hero">Soluzioni web chiare e professionali</h2>
+    <p class="subtitle">Siti veloci, SEO efficace, campagne che portano risultati.</p>
+    <a class="cta" href="#contatti">Parliamo del tuo progetto</a>
+  </section>
+
+  <!-- SERVIZI -->
+  <section id="servizi" class="servizi" aria-label="Servizi">
+    <article class="card">
+      <h3>🌐 Siti Web</h3>
+      <p>Landing page e siti su misura, responsive e veloci.</p>
+    </article>
+    <article class="card">
+      <h3>🚀 SEO</h3>
+      <p>Ottimizzazione tecnica e contenuti per farti trovare.</p>
+    </article>
+    <article class="card">
+      <h3>📢 Pubblicità</h3>
+      <p>Campagne Google e social orientate ai risultati.</p>
+    </article>
+  </section>
+
+  <!-- PORTFOLIO -->
+  <section id="portfolio" class="portfolio" aria-label="Portfolio">
+    <h3>Portfolio</h3>
+    <div class="grid">
+      <div class="tile">Progetto — Sito vetrina aziendale</div>
+      <div class="tile">Progetto — E-commerce personalizzato</div>
+      <div class="tile">Progetto — Landing page per campagne Ads</div>
+    </div>
+  </section>
+
+  <!-- CONTATTI -->
+  <footer id="contatti" class="footer" aria-label="Contatti">
+    <h3>Contatti</h3>
+    <p>📞 <strong>+39 347 944 1079</strong></p>
+    <p>✉️ <strong>info@weblab.com</strong></p>
+    <p>© <span id="year"></span> &WebLab — Tutti i diritti riservati</p>
+  </footer>
+
+  <!-- WHATSAPP BUTTON -->
+  <a class="whatsapp-fab" href="https://wa.me/393479441079" target="_blank" rel="noopener" aria-label="Chat su WhatsApp">
+    Chatta su WhatsApp
+  </a>
+
+  <script>
+    // Anno automatico
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
