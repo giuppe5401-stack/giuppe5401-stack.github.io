@@ -464,3 +464,53 @@ section { scroll-margin-top: calc(var(--nav-h) + 12px); }
 @media (prefers-reduced-motion: reduce) {
   * { animation-duration: .001ms !important; animation-iteration-count: 1 !important; transition-duration: .001ms !important; scroll-behavior: auto !important; }
 }
+
+
+/* === Center main CTA button === */
+.buttons { display: flex; justify-content: center; gap: 12px; }
+.buttons .btn.black:first-child { margin-left: auto; margin-right: auto; }
+@media (max-width: 640px) {
+  .buttons { display: grid; grid-template-columns: 1fr; gap: 12px; }
+  .buttons .btn.black { margin-left: auto; margin-right: auto; width: 100%; }
+}
+
+
+/* === Tighter CTA spacing === */
+.buttons { gap: 8px; }                 /* was 12px */
+.buttons .btn { margin: 0; }           /* remove default 0.5rem margins around buttons */
+@media (max-width: 640px) {
+  .buttons { gap: 8px; }               /* vertical space on mobile */
+}
+
+
+/* Cleanup after small logo removal */
+.logo-img, .hero-logo { display: none !important; }
+header.navbar .logo { gap: 0 !important; }
+
+
+/* Cleanup: remove space if hero brand/logo no longer present */
+.hero-brand, .hero-brand-text { display: none !important; }
+header.navbar .logo { display: none !important; }
+
+
+/* === Brand above hero title (modern black) === */
+section.hero .hero-brand { 
+  display: flex !important; 
+  align-items: center; 
+  justify-content: center; 
+  margin-bottom: 8px; 
+}
+section.hero .hero-brand-text { 
+  display: inline-block !important;
+  color: #000; 
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif; 
+  font-weight: 800; 
+  letter-spacing: .2px; 
+  line-height: 1.05; 
+  font-size: clamp(28px, 6.8vw, 56px);
+  text-decoration: none; 
+}
+@media (max-width: 640px) {
+  section.hero .hero-brand { margin-bottom: 6px; }
+  section.hero .hero-brand-text { font-size: clamp(22px, 8.2vw, 32px); }
+}
