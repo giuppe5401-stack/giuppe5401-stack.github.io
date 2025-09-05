@@ -5,17 +5,169 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>&WebLab — Servizi digitali</title>
+  <meta name="description" content="Siti web professionali, SEO mirata e campagne pubblicitarie che portano risultati.">
+  <meta name="theme-color" content="#16b6b0">
+  <link rel="icon" href="assets/logo/favicon.ico" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <meta property="og:title" content="&WebLab — Servizi digitali">
+  <meta property="og:description" content="Siti web professionali, SEO mirata e campagne pubblicitarie che portano risultati.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://giuppe5401-stack.github.io/">
+  <meta property="og:image" content="assets/logo/logo-weblab-600.png">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "WebLab",
+    "url": "https://giuppe5401-stack.github.io/",
+    "logo": "assets/logo/logo-weblab-600.png",
+    "sameAs": []
+  }
+  </script>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <main class="container">
-    <section id="contatti">
-      <h2>Contatti</h2>
-      <p>Scrivimi su <a href="mailto:info@example.com">info@example.com</a> oppure contattami su WhatsApp:</p>
+  <a class="skip" href="#contenuto">Salta al contenuto</a>
+
+  <header class="header">
+    <div class="container row">
+      <a class="brand" href="#home" aria-label="Home &WebLab">
+        <img src="assets/logo/logo-weblab-300.png"
+             srcset="assets/logo/logo-weblab-300.png 300w, assets/logo/logo-weblab-600.png 600w"
+             sizes="(max-width: 640px) 180px, 240px"
+             alt="&WebLab — Servizi digitali" class="logo">
+      </a>
+      <button class="burger" aria-label="Apri menu" aria-expanded="false" aria-controls="nav">☰</button>
+      <nav id="nav" class="nav" aria-label="Navigazione principale">
+        <a href="#chi-sono">Chi sono</a>
+        <a href="#servizi">Servizi</a>
+        <a href="#pacchetti">Pacchetti</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#contatti">Contatti</a>
+      </nav>
+    </div>
+  </header>
+
+  <section id="home" class="hero">
+    <img class="hero-bg" src="assets/img/hero-bg.svg" alt="" aria-hidden="true">
+    <div class="container">
+      <h1>Siti web chiari. Risultati concreti.</h1>
+      <p class="lead">Creo landing page e siti professionali, ottimizzati per velocità, SEO e conversioni. Gestisco campagne pubblicitarie con tracciamento e report trasparenti.</p>
       <div class="cta">
-        <a class="btn whatsapp" href="https://wa.me/393331234567" target="_blank" rel="noopener">Contattami</a>
+        <a class="btn" href="#contatti">Parliamo del tuo progetto</a>
+        <a class="btn ghost" href="#portfolio">Vedi lavori</a>
+      </div>
+    </div>
+  </section>
+
+  <main id="contenuto">
+    <section id="chi-sono" class="section container">
+      <h2>Chi sono</h2>
+      <p>Sono un consulente che aiuta professionisti e attività locali a crescere online. Mi occupo di <strong>progettazione UX</strong>, sviluppo front-end, <strong>ottimizzazione SEO</strong> e <strong>campagne Google</strong>. Preferisco processi semplici, risultati misurabili e comunicazione chiara.</p>
+    </section>
+
+    <section id="servizi" class="section container">
+      <h2>Servizi</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>Landing Page</h3>
+          <p>Progettate per convertire: messaggi chiari, performance elevate e tracciamento KPI.</p>
+        </div>
+        <div class="card">
+          <h3>Siti vetrina</h3>
+          <p>Architettura semplice ma completa, contenuti ottimizzati e design responsive.</p>
+        </div>
+        <div class="card">
+          <h3>SEO</h3>
+          <p>Analisi keyword, ottimizzazione tecnica e contenuti per posizionarti sulle ricerche locali.</p>
+        </div>
+        <div class="card">
+          <h3>Pubblicità</h3>
+          <p>Campagne Google Ads con obiettivi chiari e report mensili leggibili.</p>
+        </div>
       </div>
     </section>
+
+    <section id="pacchetti" class="section container">
+      <h2>Pacchetti</h2>
+      <div class="pricing">
+        <article class="price-card">
+          <h3>Base</h3>
+          <p class="price">€299</p>
+          <ul>
+            <li>Landing page monosezione</li>
+            <li>Template responsive</li>
+            <li>Modulo contatti</li>
+          </ul>
+          <a class="btn ghost" href="#contatti">Richiedi preventivo</a>
+        </article>
+        <article class="price-card featured">
+          <h3>Avanzato</h3>
+          <p class="price">€599</p>
+          <ul>
+            <li>Landing multipla</li>
+            <li>SEO base</li>
+            <li>Tracciamento Analytics</li>
+          </ul>
+          <a class="btn" href="#contatti">Richiedi preventivo</a>
+        </article>
+        <article class="price-card">
+          <h3>Premium</h3>
+          <p class="price">€999</p>
+          <ul>
+            <li>Sito fino a 6 pagine</li>
+            <li>SEO on-page</li>
+            <li>Setup campagne iniziale</li>
+          </ul>
+          <a class="btn ghost" href="#contatti">Richiedi preventivo</a>
+        </article>
+      </div>
+      <p class="note">I prezzi sono indicativi: creo proposte su misura in base agli obiettivi.</p>
+    </section>
+
+    <section id="portfolio" class="section container">
+      <h2>Portfolio</h2>
+      <div class="grid">
+        <figure class="work"><div class="ph"></div><figcaption>Progetto A — Landing veloce</figcaption></figure>
+        <figure class="work"><div class="ph"></div><figcaption>Progetto B — Sito vetrina</figcaption></figure>
+        <figure class="work"><div class="ph"></div><figcaption>Progetto C — Campagna Ads</figcaption></figure>
+      </div>
+    </section>
+
+    <section id="faq" class="section container">
+      <h2>FAQ</h2>
+      <details>
+        <summary>Quanto tempo serve per una landing page?</summary>
+        <p>In genere 5–10 giorni lavorativi, in base a contenuti e revisioni.</p>
+      </details>
+      <details>
+        <summary>Posso aggiornare i contenuti in autonomia?</summary>
+        <p>Sì: creo pagine chiare da modificare, e ti lascio una guida rapida.</p>
+      </details>
+    </section>
+
+    <section id="contatti" class="section container">
+      <h2>Contatti</h2>
+      <p>Scrivimi su <a href="giuppe5401@gmail,com">info@example.com</a> oppure via WhatsApp.</p>
+      <div class="cta">
+        <a class="btn" href="mailto:info"giuppe5401@gmail.com
+      ">Invia e‑mail</a>
+        <a class="btn" href="mailto:info"giuppe5401@gmail.com">Invia e‑mail</a>
+                                        
+        <a class="btn ghost" href="https://wa.me/+393479441079" target="_blank" rel="noopener">Apri WhatsApp</a>
+      </div>
+      <p class="hint">Sostituisci l’e‑mail e il numero WhatsApp con i tuoi dati reali.</p>
+    </section>
   </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© <span id="year"></span> WebLab — Servizi digitali</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
