@@ -1,33 +1,17 @@
-# Aggiornamento prezzo "Starter" in grassetto + descrizione
 
-Questo pacchetto aggiorna la sezione "Starter" nel tuo sito GitHub Pages.
+# WebLab — Sito professionale (one‑page)
 
-## Modifiche automatiche
-- Prezzo mostrato come: `€ <strong>450</strong> una tantum`
-- Testo descrizione modificato da: `Landing 1–2 sezioni` → `Landing 1 sezione`
+## Deploy su GitHub Pages
+1. Vai su `giuppe5401-stack.github.io` → **Add file → Upload files**.
+2. Trascina **tutto il contenuto** di questa cartella nella **root** del repo:
+   - index.html
+   - style.css
+   - script.js
+   - assets/logo/ (png, svg, ico)
+   - assets/img/hero-bg.svg
+3. **Commit changes** → apri `https://giuppe5401-stack.github.io/` e ricarica (Ctrl/Cmd+Shift+R).
 
----
-
-## Opzione A — Modifica manuale su GitHub
-1. Apri `index.html` su GitHub.
-2. Trova la sezione del piano **Starter**.
-3. Sostituisci la riga del prezzo con:
-   ```html
-   € <strong>450</strong> una tantum
-   ```
-4. Sostituisci anche `Landing 1–2 sezioni` con `Landing 1 sezione`.
-5. Fai **Commit**.
-
----
-
-## Opzione B — Usare gli script (locale)
-- macOS/Linux: `sed_update.sh`
-- Windows PowerShell: `powershell_update.ps1`
-
-Gli script faranno automaticamente:
-- Sostituzione descrizione
-- Aggiornamento prezzo Starter in formato con 450 in grassetto
-
-Backup: `index.html.bak`
-
----
+## Personalizza
+- Cambia e‑mail e WhatsApp in `index.html` (sezione Contatti).
+- Modifica prezzi e voci nei Pacchetti.
+- Sostituisci testi in “Chi sono” e “Servizi”.
