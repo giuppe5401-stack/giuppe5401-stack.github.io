@@ -232,3 +232,166 @@ html { scroll-behavior: smooth; }
 @media (max-width: 640px) {
   body::before { opacity: .7; }
 }
+
+
+/* === Mobile Optimization v2 === */
+html, body { overflow-x: hidden; }
+:root { --pad: max(12px, env(safe-area-inset-left)); --padr: max(12px, env(safe-area-inset-right)); --padt: max(12px, env(safe-area-inset-top)); --padb: max(12px, env(safe-area-inset-bottom)); }
+
+@media (max-width: 640px) {
+  .navbar { padding: 10px var(--padr) 10px var(--pad); }
+  .navbar nav a { display: none !important; }  /* hide inline nav items */
+  .logo-img { height: 26px; }
+  .logo span { font-size: 16px; font-weight: 800; }
+
+  .hero { padding: 2.2rem 1rem 1.6rem; }
+  .hero-brand-text { font-size: clamp(22px, 8vw, 34px) !important; line-height: 1.1; }
+  .hero h1 { font-size: clamp(24px, 7.5vw, 34px); line-height: 1.2; margin: .35rem 0 .6rem; }
+  .hero p { font-size: 16px; opacity: .95; margin: 0 auto; max-width: 28ch; }
+
+  .buttons { display: grid; grid-template-columns: 1fr; gap: 12px; margin-top: 16px; }
+  .btn { width: 100%; padding: 14px 16px; font-size: 16px; border-radius: 12px; }
+
+  .cards { grid-template-columns: 1fr; gap: 12px; }
+  .card { padding: 14px; border-radius: 12px; }
+
+  /* Side stacks: move toggle to bottom-right as FAB and adjust stacks */
+  .sb-toggle { 
+    display: inline-flex; 
+    position: fixed; 
+    right: var(--padr); 
+    bottom: calc(12px + var(--padb)); 
+    width: 56px; height: 56px; 
+    border-radius: 999px; 
+    padding: 0; 
+    font-size: 20px; 
+    align-items: center; 
+    justify-content: center; 
+  }
+  .side-buttons { top: auto; bottom: calc(80px + var(--padb)); }
+  .side-buttons.left { left: var(--pad); }
+  .side-buttons.right { right: var(--padr); }
+}
+
+@media (min-width: 641px) {
+  .sb-toggle { top: 14px; right: 12px; }
+}
+
+
+/* === Smartphone Optimization (final) === */
+meta[name="viewport"] { content: width=device-width, initial-scale=1, viewport-fit=cover; }
+
+:root {
+  --padx: max(14px, env(safe-area-inset-left));
+  --padxr: max(14px, env(safe-area-inset-right));
+  --padt: max(10px, env(safe-area-inset-top));
+  --padb: max(10px, env(safe-area-inset-bottom));
+}
+
+@media (max-width: 640px) {
+  .navbar { padding: 10px var(--padxr) 10px var(--padx); }
+  .navbar nav a { display: none !important; }   /* hide inline nav items on phones */
+  .logo { gap: 8px; }
+  .logo-img { height: 24px; }
+  .logo span { font-size: 16px; font-weight: 800; white-space: nowrap; }
+
+  .hero { padding: 2.2rem var(--padx) 1.6rem; }
+  .hero-brand-text { font-size: clamp(22px, 8.4vw, 32px) !important; line-height: 1.1; }
+  .hero h1 { font-size: clamp(24px, 7.6vw, 34px); line-height: 1.2; margin: .35rem 0 .6rem; }
+  .hero p { font-size: 16px; opacity: .95; margin: 0 auto; max-width: 28ch; }
+
+  .buttons { display: grid; grid-template-columns: 1fr; gap: 12px; margin-top: 14px; }
+  .btn { width: 100%; padding: 14px 16px; font-size: 16px; border-radius: 14px; }
+
+  .servizi { padding: 2rem var(--padx); }
+  .cards { grid-template-columns: 1fr; gap: 12px; }
+  .card { padding: 14px; border-radius: 14px; }
+
+  .contatti { padding: 2.2rem var(--padx); }
+  .contact-buttons { grid-template-columns: 1fr; }
+
+  /* Side buttons & toggle (FAB) */
+  .sb-toggle { 
+    display: inline-flex; 
+    position: fixed; 
+    right: var(--padxr); 
+    bottom: calc(12px + var(--padb)); 
+    width: 56px; height: 56px; 
+    border-radius: 999px; 
+    padding: 0; font-size: 20px; 
+    align-items: center; justify-content: center;
+  }
+  .side-buttons { top: auto; bottom: calc(80px + var(--padb)); }
+  .side-buttons.left { left: var(--padx); }
+  .side-buttons.right { right: var(--padxr); }
+}
+
+/* Tap targets and overflow safety */
+html, body { overflow-x: hidden; }
+.btn, .side-btn, .sb-toggle { min-height: 44px; }
+
+
+/* === Mobile drawer menu === */
+.menu-toggle {
+  display: none;
+  margin-left: 8px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  background: #000;
+  color: #fff;
+  border: none;
+  font-weight: 800;
+  box-shadow: 0 10px 24px rgba(0,0,0,.35);
+}
+.menu-toggle:focus { outline: none; box-shadow: 0 0 0 3px rgba(56,247,199,.25), 0 10px 24px rgba(0,0,0,.35); }
+
+.mobile-drawer {
+  position: fixed;
+  top: 0; right: 0;
+  width: min(78vw, 360px);
+  height: 100dvh;
+  background: #03251d;
+  color: #fff;
+  transform: translateX(100%);
+  transition: transform .28s ease;
+  z-index: 11000;
+  box-shadow: -20px 0 50px rgba(0,0,0,.5);
+  border-left: 1px solid rgba(255,255,255,.08);
+  display: flex;
+  flex-direction: column;
+}
+.drawer-header {
+  padding: 18px 18px 8px;
+  font-weight: 900;
+  font-size: 20px;
+  border-bottom: 1px solid rgba(255,255,255,.08);
+}
+.drawer-links { list-style: none; padding: 6px 0; margin: 0; }
+.drawer-link {
+  display: block;
+  padding: 14px 18px;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 700;
+}
+.drawer-link:hover { background: rgba(255,255,255,.08); }
+
+.drawer-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.4);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .25s ease;
+  z-index: 10999;
+}
+
+/* Open state */
+body.menu-open .mobile-drawer { transform: translateX(0); }
+body.menu-open .drawer-backdrop { opacity: 1; pointer-events: auto; }
+
+/* Show toggle on phones */
+@media (max-width: 640px) {
+  .menu-toggle { display: inline-block; }
+  .navbar nav a { display: none !important; }
+}

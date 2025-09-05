@@ -7,15 +7,15 @@
 <title>&amp;WebLab - Servizi Digitali</title>
 <link href="style.css" rel="stylesheet"/>
 <link href="favicon.ico" rel="icon" type="image/x-icon"/><link href="favicon-32.png" rel="icon" sizes="32x32" type="image/png"/><link href="apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/></head>
-<body><a id="top"></a>
+<body>
 <header class="navbar">
 <div class="logo"><img alt="&amp;WebLab logo" class="logo-img" src="logo.png"/><span>&amp;WebLab</span></div>
 <nav>
 <a href="#servizi">Servizi</a>
 <a href="#contatti">Contatti</a>
 <a href="https://www.linkedin.com/in/giuseppe-lualdi-54346a320" target="_blank">LinkedIn</a>
-</nav>
-</header><button aria-controls="side-left side-right" aria-expanded="false" class="sb-toggle">☰ Azioni</button><div class="side-buttons right" id="side-right"><a aria-label="Apri WhatsApp" class="side-btn" href="https://wa.me/393479441079" rel="noopener" target="_blank">💬 WhatsApp</a><a aria-label="Chiama" class="side-btn" href="tel:+393479441079">📞 Chiama</a><a aria-label="Invia Email" class="side-btn" href="mailto:giuppe5401@gmail.com">✉️ Email</a><a aria-label="Profilo LinkedIn" class="side-btn" href="https://www.linkedin.com/in/giuseppe-lualdi-54346a320" rel="noopener" target="_blank">in LinkedIn</a></div><div class="side-buttons left" id="side-left"><a aria-label="Vai ai Servizi" class="side-btn" href="#servizi">🧭 Servizi</a><a aria-label="Vai ai Contatti" class="side-btn" href="#contatti">📇 Contatti</a><a aria-label="Torna su" class="side-btn" href="#top">🔝 Su</a></div>
+</nav><button aria-controls="mobile-drawer mobile-backdrop" aria-expanded="false" class="menu-toggle">☰ Menu</button>
+</header>
 <section class="hero">
 <div class="hero-brand"><span class="hero-brand-text">&amp;WebLab</span></div><h1>Servizi digitali che fanno crescere il tuo business</h1>
 <p>Landing page, SEO, campagne Ads e soluzioni su misura.</p>
@@ -49,18 +49,22 @@
 <footer class="footer">
 <p>© 2025 &amp;WebLab — Tutti i diritti riservati</p>
 </footer>
-<script>
+<nav class="mobile-drawer" id="mobile-drawer"><div class="drawer-header">&amp;WebLab</div><ul class="drawer-links"><li><a class="drawer-link" href="#servizi">Servizi</a></li><li><a class="drawer-link" href="#contatti">Contatti</a></li><li><a class="drawer-link" href="https://www.linkedin.com/in/giuseppe-lualdi-54346a320" rel="noopener" target="_blank">LinkedIn</a></li><li><a class="drawer-link" href="https://wa.me/393479441079" rel="noopener" target="_blank">WhatsApp</a></li><li><a class="drawer-link" href="tel:+393479441079">Chiama</a></li><li><a class="drawer-link" href="mailto:giuppe5401@gmail.com">Email</a></li></ul></nav><div aria-hidden="true" class="drawer-backdrop" id="mobile-backdrop"></div><script>
 (function(){
-  var btn = document.querySelector('.sb-toggle');
-  if(!btn) return;
-  function toggle(){
-    document.body.classList.toggle('sb-open');
-    btn.setAttribute('aria-expanded', document.body.classList.contains('sb-open'));
+  var menuBtn = document.querySelector('.menu-toggle');
+  var backdrop = document.getElementById('mobile-backdrop');
+  function toggleMenu(force){
+    var open = typeof force==='boolean' ? force : !document.body.classList.contains('menu-open');
+    document.body.classList.toggle('menu-open', open);
+    if(menuBtn){ menuBtn.setAttribute('aria-expanded', open); }
   }
-  btn.addEventListener('click', toggle);
-  btn.addEventListener('keydown', function(e){
-    if(e.key === 'Enter' || e.key === ' '){ e.preventDefault(); toggle(); }
-  });
+  if(menuBtn){ 
+    menuBtn.addEventListener('click', function(){ toggleMenu(); });
+    menuBtn.addEventListener('keydown', function(e){ if(e.key==='Enter'||e.key===' '){ e.preventDefault(); toggleMenu(); } });
+  }
+  if(backdrop){ backdrop.addEventListener('click', function(){ toggleMenu(false); }); }
+  // Close on ESC
+  document.addEventListener('keydown', function(e){ if(e.key==='Escape'){ toggleMenu(false); }});
 })();
 </script></body>
 </html>
