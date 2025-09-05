@@ -1,30 +1,206 @@
-
 body {
-  font-family: Poppins, system-ui, sans-serif;
-  margin:0;
-  padding:0;
-  background:#f3f4f6;
-  color:#111827;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #064e3b;
+  color: #fff;
+  line-height: 1.6;
 }
-.container {
-  width: min(900px, 94%);
-  margin: 40px auto;
+.navbar { display:flex; justify-content:space-between; align-items:center; padding:1rem 2rem; background:#022c22; position:sticky; top:0; }
+.navbar a { color:#fff; margin-left:1rem; text-decoration:none; }
+.logo { font-weight: bold; font-size: 1.2rem; }
+.hero { text-align:center; padding:4rem 2rem; }
+.hero h1 { font-size:2rem; margin-bottom:1rem; }
+.buttons { margin-top:2rem; }
+.btn { display:inline-block; padding:0.8rem 1.2rem; border-radius:6px; margin:0.5rem; text-decoration:none; font-weight:bold; }
+.btn.black { background:#000; color:#fff; }
+.btn.outline { border:2px solid #000; color:#fff; }
+.servizi { padding:3rem 2rem; }
+.cards { display:grid; grid-template-columns:repeat(auto-fit, minmax(200px,1fr)); gap:1.5rem; margin-top:2rem; }
+.card { background:#065f46; padding:1rem; border-radius:8px; }
+.contatti { padding:3rem 2rem; background:#022c22; }
+.contatti a { color:#4ade80; }
+.footer { text-align:center; padding:1rem; background:#011a13; font-size:0.9rem; color:#ccc; }
+.contact-buttons { display:grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 0.8rem; margin-top: 1.2rem; }
+.contatti .btn { text-align:center; }
+
+
+/* Logo in navbar */
+.logo { display: flex; align-items: center; gap: 0.6rem; }
+.logo-img { height: 40px; width: auto; display: block; }
+@media (max-width: 480px) { .logo-img { height: 32px; } }
+
+
+/* Logo in hero */
+.hero-logo {
+  height: 96px;
+  width: auto;
+  margin-bottom: 1rem;
+  display: inline-block;
+  filter: drop-shadow(0 2px 6px rgba(0,0,0,0.35));
 }
-h2 { margin-bottom: 12px; }
-.btn {
-  display:inline-block;
-  padding:12px 20px;
-  border-radius:12px;
-  font-weight:600;
-  text-decoration:none;
+@media (max-width: 480px) {
+  .hero-logo { height: 72px; }
 }
-/* Pulsante WhatsApp verde */
-.btn.whatsapp {
-  background:#25D366; /* verde ufficiale WhatsApp */
-  border:1px solid #25D366;
-  color:white;
+
+
+/* Brand block above hero title */
+.hero-brand { display:flex; align-items:center; justify-content:center; gap:0.6rem; margin-bottom:0.75rem; }
+.hero-logo { height: 120px; width:auto; display:block; }
+.hero-logo.black { filter: brightness(0) saturate(100%); } /* forza il logo in nero */
+.hero-brand-text { font-weight: 900; font-size: clamp(28px, 6vw, 56px); color:#000; line-height:1; }
+/* Optional: leggero sfondo per leggibilità su verde scuro */
+@media (min-width: 0px) {
+  .hero-brand-text { background: rgba(255,255,255,0.85); padding: 0.15rem 0.5rem; border-radius: 10px; }
 }
-.btn.whatsapp:hover {
-  background:#1ebe5b;
-  border-color:#1ebe5b;
+@media (max-width: 480px) { .hero-logo { height: 88px; } }
+
+
+/* === Overrides richiesti (hero brand) === */
+.hero-brand-text { 
+  background: transparent !important; 
+  padding: 0 !important; 
+  color: #000; 
+  font-weight: 900; 
+  font-size: clamp(32px, 7vw, 72px) !important; 
+  line-height: 1.05;
+}
+
+.hero-logo { 
+  height: 144px !important; 
+  width: auto; 
+  display: block; 
+  filter: drop-shadow(0 2px 6px rgba(0,0,0,0.2));
+}
+.hero-logo.black { filter: brightness(0) saturate(100%) drop-shadow(0 2px 6px rgba(0,0,0,0.2)); }
+
+@media (max-width: 480px) { 
+  .hero-logo { height: 96px !important; } 
+}
+
+
+/* Underline the big &WebLab in hero */
+.hero-brand-text {
+  text-decoration: underline !important;
+  text-decoration-thickness: 6px !important;
+  text-underline-offset: 6px !important;
+}
+
+
+/* ===== iTech touches ===== */
+:root {
+  --grid-color: rgba(255,255,255,.04);
+  --accent: #38f7c7;
+}
+/* Subtle tech grid overlay */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(var(--grid-color) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-color) 1px, transparent 1px);
+  background-size: 40px 40px, 40px 40px;
+  mix-blend-mode: overlay;
+  z-index: 0;
+}
+/* Elevation/glass effect for cards */
+.card {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.12);
+  backdrop-filter: blur(4px);
+}
+/* Neon underline for &WebLab big title */
+.hero-brand-text {
+  position: relative;
+  text-decoration: none;
+}
+.hero-brand-text::after {
+  content: "";
+  position: absolute;
+  left: 0; right: 0; bottom: -8px;
+  height: 6px;
+  background: linear-gradient(90deg, #00ffd0, #7cf9ff, #00ffd0);
+  background-size: 200% 100%;
+  animation: glowline 3s linear infinite;
+  border-radius: 999px;
+  box-shadow: 0 0 18px rgba(0,255,208,.45);
+}
+@keyframes glowline {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 200% 50%; }
+}
+/* Hero title subtle glow */
+.hero h1 { text-shadow: 0 2px 12px rgba(0,0,0,.35); letter-spacing: 0.2px; }
+/* Buttons: neon focus */
+.btn:focus { outline: none; box-shadow: 0 0 0 3px rgba(56,247,199,.25); }
+/* Navbar subtle gradient border */
+.navbar { border-bottom: 1px solid rgba(255,255,255,0.08); box-shadow: 0 6px 30px rgba(0,0,0,.25); }
+/* Footer thin top border */
+.footer { border-top: 1px solid rgba(255,255,255,.08); }
+/* Optional: contact buttons layout if present */
+.contact-buttons { display:grid; grid-template-columns: repeat(auto-fit, minmax(200px,1fr)); gap:.8rem; margin-top:1.2rem; }
+.contatti .btn { text-align:center; border-radius: 12px; }
+
+
+/* Override: remove underline under &WebLab */
+.hero-brand-text { text-decoration: none !important; }
+.hero-brand-text::after { display: none !important; content: none !important; }
+
+
+/* Side vertical buttons */
+.side-buttons { 
+  position: fixed; 
+  top: 96px; 
+  display: flex; 
+  flex-direction: column; 
+  gap: 8px; 
+  z-index: 9999; 
+}
+.side-buttons.left { left: 12px; }
+.side-buttons.right { right: 12px; }
+.side-btn { 
+  display: inline-block; 
+  background: #000; 
+  color: #fff; 
+  text-decoration: none; 
+  padding: 10px 12px; 
+  border-radius: 12px; 
+  font-weight: 700; 
+  box-shadow: 0 8px 20px rgba(0,0,0,.35);
+  transition: transform .2s ease, box-shadow .2s ease, opacity .2s ease;
+  opacity: .95;
+}
+.side-btn:hover { 
+  transform: translateY(-2px); 
+  box-shadow: 0 12px 28px rgba(0,0,0,.45);
+  opacity: 1;
+}
+@media (max-width: 900px) {
+  .side-buttons { display: none; } /* Evita ingombro su mobile/tablet */
+}
+
+
+/* === Mobile toggle for side-buttons === */
+.sb-toggle {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 10px 14px;
+  border-radius: 12px;
+  background: #000;
+  color: #fff;
+  border: none;
+  font-weight: 800;
+  cursor: pointer;
+  box-shadow: 0 10px 24px rgba(0,0,0,.35);
+  z-index: 10000;
+}
+.sb-toggle:focus { outline: none; box-shadow: 0 0 0 3px rgba(56,247,199,.25), 0 10px 24px rgba(0,0,0,.35); }
+
+@media (max-width: 900px) {
+  .sb-toggle { display: inline-flex; position: fixed; top: 14px; right: 12px; }
+  .side-buttons { display: none !important; }
+  body.sb-open .side-buttons { display: flex !important; }
 }

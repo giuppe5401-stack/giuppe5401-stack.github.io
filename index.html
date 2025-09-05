@@ -1,1 +1,66 @@
+<!DOCTYPE html>
 
+<html lang="it">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>&amp;WebLab - Servizi Digitali</title>
+<link href="style.css" rel="stylesheet"/>
+<link href="favicon.ico" rel="icon" type="image/x-icon"/><link href="favicon-32.png" rel="icon" sizes="32x32" type="image/png"/><link href="apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/></head>
+<body><a id="top"></a>
+<header class="navbar">
+<div class="logo"><img alt="&amp;WebLab logo" class="logo-img" src="logo.png"/><span>&amp;WebLab</span></div>
+<nav>
+<a href="#servizi">Servizi</a>
+<a href="#contatti">Contatti</a>
+<a href="https://www.linkedin.com/in/giuseppe-lualdi-54346a320" target="_blank">LinkedIn</a>
+</nav>
+</header><button aria-controls="side-left side-right" aria-expanded="false" class="sb-toggle">☰ Azioni</button><div class="side-buttons right" id="side-right"><a aria-label="Apri WhatsApp" class="side-btn" href="https://wa.me/393479441079" rel="noopener" target="_blank">💬 WhatsApp</a><a aria-label="Chiama" class="side-btn" href="tel:+393479441079">📞 Chiama</a><a aria-label="Invia Email" class="side-btn" href="mailto:giuppe5401@gmail.com">✉️ Email</a><a aria-label="Profilo LinkedIn" class="side-btn" href="https://www.linkedin.com/in/giuseppe-lualdi-54346a320" rel="noopener" target="_blank">in LinkedIn</a></div><div class="side-buttons left" id="side-left"><a aria-label="Vai ai Servizi" class="side-btn" href="#servizi">🧭 Servizi</a><a aria-label="Vai ai Contatti" class="side-btn" href="#contatti">📇 Contatti</a><a aria-label="Torna su" class="side-btn" href="#top">🔝 Su</a></div>
+<section class="hero">
+<div class="hero-brand"><span class="hero-brand-text">&amp;WebLab</span></div><h1>Servizi digitali che fanno crescere il tuo business</h1>
+<p>Landing page, SEO, campagne Ads e soluzioni su misura.</p>
+<div class="buttons">
+<a class="btn black" href="#contatti">Richiedi un preventivo su misura</a>
+<a class="btn outline" href="https://wa.me/393479441079">Scrivi su WhatsApp</a>
+</div>
+</section>
+<section class="servizi" id="servizi">
+<h2>Servizi</h2>
+<div class="cards">
+<div class="card">
+<h3>Carrozzeria</h3>
+<p>Campagne Google Ads + landing preventivo rapido.</p>
+</div>
+<div class="card">
+<h3>Studio Commercialista</h3>
+<p>Landing chiara con CTA WhatsApp per richieste preventive.</p>
+</div>
+<div class="card"><h3>Creazioni Codici QR</h3><p>Generazione di QR personalizzati per menu, volantini, biglietti da visita, pagamenti e link tracciabili.</p></div><div class="card"><h3>Dentisti</h3><p>Landing “Prenota visita” + Local SEO e Google Ads con estensioni chiamata.</p></div><div class="card"><h3>Erboristeria</h3><p>Landing page + Local SEO per erboristerie: prodotti, contatti e visite in negozio.</p></div></div>
+</section>
+<section class="contatti" id="contatti">
+<h2>Parliamo del tuo progetto</h2>
+<p>Scrivici per ricevere una proposta chiara e veloce.</p>
+<ul>
+<li><strong>Telefono:</strong> <a href="tel:+393479441079">+39 347 944 1079</a></li>
+<li><strong>Email:</strong> <a href="mailto:giuppe5401@gmail.com">giuppe5401@gmail.com</a></li>
+<li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/giuseppe-lualdi-54346a320" target="_blank">Profilo</a></li>
+</ul>
+</section>
+<footer class="footer">
+<p>© 2025 &amp;WebLab — Tutti i diritti riservati</p>
+</footer>
+<script>
+(function(){
+  var btn = document.querySelector('.sb-toggle');
+  if(!btn) return;
+  function toggle(){
+    document.body.classList.toggle('sb-open');
+    btn.setAttribute('aria-expanded', document.body.classList.contains('sb-open'));
+  }
+  btn.addEventListener('click', toggle);
+  btn.addEventListener('keydown', function(e){
+    if(e.key === 'Enter' || e.key === ' '){ e.preventDefault(); toggle(); }
+  });
+})();
+</script></body>
+</html>
