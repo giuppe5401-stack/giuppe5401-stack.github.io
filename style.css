@@ -39,3 +39,20 @@ nav a:hover { text-decoration: underline; }
 #contatti a { color: #fff; text-decoration: underline; }
 
 footer { background: #000; text-align:center; padding: 20px; margin-top:40px; }
+
+#contatti .buttons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+/* Bottone WhatsApp */
+.btn.whatsapp {
+  background: #25D366;
+  color: #fff;
+}
+.btn.whatsapp:hover {
+  background: #1ebe5a;
+}
