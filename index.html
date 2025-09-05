@@ -1,1 +1,92 @@
 
+import React from "react";
+<CardContent>
+<p className="text-sm text-white/80">Pagina attività equestri con <strong>prenotazione</strong> e contatto diretto: passeggiate, lezioni, eventi.</p>
+<ul className="mt-4 grid gap-2 text-sm text-white/85">
+<li className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-emerald-300"/> Calendario richieste via WhatsApp</li>
+<li className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-emerald-300"/> Sezione recensioni</li>
+</ul>
+</CardContent>
+</Card>
+</div>
+
+
+<div className="mt-10 flex flex-wrap items-center gap-4">
+<Button href="#contatti" variant="black" size="md" icon={ChevronRight}>Parliamo del tuo progetto</Button>
+<span className="text-sm text-white/70">Preventivi rapidi, senza impegno</span>
+</div>
+</div>
+</section>
+
+
+{/* CONTATTI */}
+<section id="contatti" className="relative border-t border-white/10 py-16 md:py-24">
+<div className="mx-auto max-w-5xl px-4">
+<motion.h2 {...fadeUp} className="text-3xl font-bold sm:text-4xl">Parliamo del tuo progetto</motion.h2>
+<p className="mt-2 max-w-2xl text-white/80">Raccontaci obiettivi e tempi: rispondiamo velocemente con una proposta chiara.</p>
+
+
+<div className="mt-8 grid gap-6 md:grid-cols-2">
+<Card className="border border-white/10">
+<CardContent>
+<form className="grid gap-4">
+<label className="grid gap-2">
+<span className="text-sm text-white/80">Nome</span>
+<input type="text" placeholder="Il tuo nome" className="w-full rounded-xl border border-white/15 bg-white/95 px-4 py-3 text-emerald-950 placeholder-emerald-700/60 focus:border-emerald-400 focus:outline-none" />
+</label>
+<label className="grid gap-2">
+<span className="text-sm text-white/80">Email</span>
+<input type="email" placeholder="tuo@email.it" className="w-full rounded-xl border border-white/15 bg-white/95 px-4 py-3 text-emerald-950 placeholder-emerald-700/60 focus:border-emerald-400 focus:outline-none" />
+</label>
+<label className="grid gap-2">
+<span className="text-sm text-white/80">Messaggio</span>
+<textarea placeholder="Raccontaci di cosa hai bisogno" rows={5} className="w-full resize-none rounded-xl border border-white/15 bg-white/95 px-4 py-3 text-emerald-950 placeholder-emerald-700/60 focus:border-emerald-400 focus:outline-none" />
+</label>
+<div className="flex items-center justify-between gap-3">
+<label className="flex items-center gap-2 text-sm text-white/80">
+<input type="checkbox" className="h-4 w-4 rounded border-white/20 bg-transparent" />
+Accetto l'informativa privacy
+</label>
+<Button as="button" type="submit" variant="black" size="md">Invia richiesta</Button>
+</div>
+</form>
+</CardContent>
+</Card>
+
+
+<div className="space-y-6">
+<Card className="border border-white/10">
+<CardContent>
+<h3 className="text-lg font-semibold">Contatti</h3>
+<div className="mt-4 grid gap-3 text-white/90">
+<div className="flex items-center gap-3"><Phone className="h-5 w-5 text-emerald-300"/><a href="tel:+393479441079">+39 347 944 1079</a></div>
+<div className="flex items-center gap-3"><Mail className="h-5 w-5 text-emerald-300"/><a href="mailto:giuppe5401@gmail.com">giuppe5401@gmail.com</a></div>
+<div className="flex items-center gap-3"><Linkedin className="h-5 w-5 text-emerald-300"/><a href="https://www.linkedin.com/in/giuseppe-lualdi-54346a320" target="_blank" className="hover:underline">Profilo LinkedIn</a></div>
+</div>
+<div className="mt-6 flex flex-wrap gap-3">
+<Button href="https://wa.me/393479441079" variant="black">Scrivi su WhatsApp</Button>
+<Button href="mailto:giuppe5401@gmail.com" variant="ghost">Manda una mail</Button>
+<Button href="https://www.linkedin.com/in/giuseppe-lualdi-54346a320" variant="ghost" icon={Linkedin}>LinkedIn</Button>
+</div>
+</CardContent>
+</Card>
+</div>
+</div>
+</div>
+</section>
+
+
+{/* FOOTER */}
+<footer className="border-t border-white/10 py-8">
+<div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-4 sm:flex-row">
+<p className="text-white/60">© {new Date().getFullYear()} &WebLab — Tutti i diritti riservati</p>
+<div className="flex items-center gap-4 text-sm text-white/70">
+<a href="#" className="hover:text-white">Privacy</a>
+<a href="#" className="hover:text-white">Cookie</a>
+<a href="#contatti" className="hover:text-white">Contatti</a>
+</div>
+</div>
+</footer>
+</div>
+);
+}
