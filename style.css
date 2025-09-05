@@ -395,3 +395,8 @@ body.menu-open .drawer-backdrop { opacity: 1; pointer-events: auto; }
   .menu-toggle { display: inline-block; }
   .navbar nav a { display: none !important; }
 }
+
+
+/* Remove-logo adjustments */
+.logo { gap: 0.4rem; }
+.logo-img { display: none !important; }
