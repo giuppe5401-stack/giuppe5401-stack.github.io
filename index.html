@@ -19,7 +19,42 @@
     </div>
     <nav class="nav">
       <a href="#chi-sono">Chi sono</a>
-      <a href="#servizi">Servizi</a>
+      <a href="#servizi">Servizi</a>:root {
+  --bg: #f0f0f0;       /* sfondo grigio */
+  --text: #141414;     /* testo nero */
+  --accent: #16b6b0;   /* colore pulsanti */
+  --card: #ffffff;
+  --border: #e5e5e5;
+}
+* { box-sizing: border-box; }
+html, body { margin:0; padding:0; background:var(--bg); color:var(--text); font-family: 'Poppins', sans-serif; }
+img { display:block; max-width:100%; height:auto; }
+
+.container { width:min(1100px, 94%); margin-inline:auto; padding: 24px 0; }
+.site-header { display:flex; align-items:center; justify-content:space-between; padding:14px 20px; border-bottom:1px solid var(--border); background:var(--bg); position:sticky; top:0; }
+.nav a { margin-left:14px; font-weight:500; }
+
+.hero { text-align:center; padding:48px 0; }
+.hero h1 { font-size: clamp(28px, 6vw, 48px); margin: 6px 0 10px; }
+.lead { font-size: clamp(16px, 2.5vw, 20px); opacity:.9; }
+.btn { display:inline-block; margin-top:16px; padding:12px 18px; border-radius:12px; background:var(--text); color:var(--bg); font-weight:600; border:1px solid var(--text); }
+.btn.ghost { background:transparent; color:var(--text); }
+
+.cards { display:grid; grid-template-columns: repeat(auto-fit,minmax(240px,1fr)); gap:16px; margin-top:12px; }
+.card { background:var(--card); padding:18px; border:1px solid var(--border); border-radius:14px; }
+
+.pricing { display:grid; grid-template-columns: repeat(auto-fit,minmax(240px,1fr)); gap:16px; margin-top:12px; }
+.price-card { background:var(--card); padding:20px; border:1px solid var(--border); border-radius:16px; text-align:center; }
+.price-card.featured { border-color: var(--text); }
+.price { font-size:28px; font-weight:700; margin:8px 0 12px; }
+.price-card ul { text-align:left; list-style: none; padding:0; margin:0 0 12px 0; }
+.price-card li::before { content:"• "; }
+
+.note { opacity:.8; margin-top:8px; }
+
+.footer { border-top:1px solid var(--border); text-align:center; padding:18px 12px; margin-top:40px; }
+.site-logo { width:auto; height:60px; }
+
       <a href="#pacchetti">Pacchetti</a>
       <a href="#contatti">Contatti</a>
     </nav>
