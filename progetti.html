@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Proge i in corso – Pubblica Assistenza</title>
+<meta name="description" content="Elenco dei proge i in corso di sviluppo: demo e prototipi aperti per valutazioni interne e dei clienti.">
+<link rel="canonical" href="h ps://example.it/proge i.html">
+<style>*,*::before,*::after{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:#0d1b3f;background:linear-gradient(180deg,#fdeaf0,#fff 120%);}.container{max-width:1140px;margin:0 auto;padding:0 18px}header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.85);backdrop-filter:saturate(140%) blur(8px);border-bo om:1px solid rgba(31,94,255,.08)}.nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0}.brand{display:flex;align-items:center;gap:10px;text-decoration:none}.logo{width:40px;height:40px;border-radius:12px;display:grid;place-items:center;background:#1f5eff;box-shadow:0 10px 24px rgba(13,27,63,.08)}.brand-title{font-weight:800;le er-spacing:.2px;color:#1f5eff}nav ul{list-style:none;display:flex;gap:18px;margin:0;padding:0}nav a{color:#0d1b3f;text-decoration:none;font-weight:600}nav a:hover{color:#1f5eff}.cta{display:inline-flex;align-items:center;gap:8px;background:#1f5eff;color:#fff;text-decoration:none;padding:10px 14px;border-radius:999px;font-weight:700;box-shadow:0 10px 24px rgba(13,27,63,.08)}.cta.secondary{background:#fff;color:#1f5eff;border:2px solid #1f5eff}section{padding:48px 0}.card{background:#fff;border-radius:18px;box-shadow:0 10px 24px rgba(13,27,63,.08);padding:22px;border:1px solid rgba(13,27,63,.06)}.grid{display:grid;grid-template-columns:repeat(12,1fr);gap:18px}.g-4{grid-column:span 12}@media(min-width:900px){.g-4{grid-column:span 4}}.muted{color:#4d5a7a}footer{padding:28px 0;color:#5f6c8a}footer a{color:inherit}.skip{position:absolute;left:-9999px} .skip:focus{left:16px;top:16px;background:#fff;padding:8px 12px;border-radius:10px;box-shadow:0 10px 24px rgba(13,27,63,.08)}.badge{display:inline-block;background:#1039b3;color:#fff;padding:6px 10px;border-radius:999px;font-weight:700}.hero h1{font-size:clamp(2rem,4vw,3rem);line-height:1.1;margin:14px 0 8px}.chips{display:flex;gap:8px;flex-wrap:wrap}.chip{display:inline-block;padding:6px 10px;border-radius:999px;background:#eef2ff;color:#1f5eff;font-weight:700;font-size:.9rem}.list{margin:0;padding-left:18px} .lis li{margin:.4rem 0}</style>
+</head>
+<body>
+<a class="skip" href="#contenuto">Salta al contenuto</a>
+<header>
+ <div class="container nav" role="navigation" aria-label="Principale">
+ <a class="brand" href="index.html">
+ <span class="logo" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" xmlns="h p://www.w3.org/2000/svg"><path d="M10 4h4v6h6v4h-6v6h-4v-6H4v-4h6V4z" fill="#fff"/></svg></span>
+ <span class="brand-title">PUBBLICA ASSISTENZA</span>
+ </a>
+ <nav>
+ <ul>
+ <li><a href="index.html">Home</a></li>
+ <li><a href="proge i.html">Proge i</a></li>
+ </ul>
+ </nav>
+ <a class="cta" href="index.html#conta i">Conta aci</a>
+ </div>
+</header>
+
+<main id="contenuto">
+ <section class="container">
+ <h1 style="color:#1f5eff">Proge i in corso di sviluppo</h1>
+ <p class="muted">Demo e prototipi visibili liberamente. Conta aci per provarli o richiedere una presentazione.</p>
+
+ <article class="card" aria-labelledby="p1"><h2 id="p1">🚑 Gestione Pubblica Assistenza</h2>
+ <p>Pia aforma per coordinare mezzi, prenotazioni e urni del personale.</p>
+ <ul class="list"><li>Dashboard operatori</li><li>Gestione urni e note operative</li><li>Prototipo aperto per est</li></ul>
+ <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:10px">
+ <a class="cta" href="index.html#servizi">Vedi funzionalità</a>
+ </div>
+ </article>
+
+ <article class="card" aria-labelledby="p2"><h2 id="p2">🌿 Landing page Erboristeria</h2>
+ <p>Sito vetrina con catalogo prodo i e SEO locale.</p>
+ <ul class="list"><li>Colori naturali (verde/beige)</li><li>Inventario prodo i (citrullina, zinco…)</li><li>Ricerca locale o imizzata</li></ul>
+ </article>
+
+ <article class="card" aria-labelledby="p3"><h2 id="p3">🐴 Maneggio – prenotazioni online</h2>
+ <p>Pagina per prenotare passeggiate e a ività a cavallo.</p>
+ <ul class="list"><li>Scheda a ività</li><li>Conta o dire o</li><li>Sezione foto e recensioni</li></ul>
+ </article>
+ </section>
+</main>
+
+<footer role="contentinfo">
+ <div class="container" style="display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between">
+ <p>© <span id="year"></span> Pubblica Assistenza – Genova.</p>
+ <p><a href="index.html">Home</a> · <a href="#">Privacy</a></p>
+ </div>
+</footer>
+<script>document.getElementById('year').textContent=new Date().getFullYear()</script>
+</body>
+</html>
