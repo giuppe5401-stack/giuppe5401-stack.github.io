@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>&WebLab - Servizi Digitali</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Pubblica Assistenza – Trasporti Sanitari e Supporto a Genova</title>
@@ -26,6 +31,8 @@
 </script>
 </head>
 <body>
+  <header>
+    <nav>
 <a class="skip" href="#contenuto">Salta al contenuto</a>
 <header>
  <div class="container nav" role="navigation" aria-label="Principale">
@@ -45,6 +52,8 @@
  </div>
 </header>
 
+</nav>
+  </header>
 <main id="contenuto">
  <section class="hero">
  <div class="container">
@@ -61,6 +70,15 @@
  </div>
  </section>
 
+  <section class="hero">
+    <div class="hero-brand">&WebLab</div>
+    <h1>Servizi digitali su misura</h1>
+    <p>Landing page, SEO, campagne Ads e soluzioni su misura.</p>
+    <div class="buttons">
+      <a class="btn black" href="#prezzi">Listino prezzi</a>
+      <a class="btn" href="#contatti">Richiedi un preventivo su misura</a>
+    </div>
+  </section>
  <section id="servizi">
  <div class="container">
  <h2>Servizi</h2>
@@ -81,6 +99,36 @@
  </div>
  </section>
 
+  <section id="servizi">
+    <h2>Cosa offriamo</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Erboristeria locale</h3>
+        <p>Landing page + Local SEO per prodotti come citrullina e zinco.</p>
+      </div>
+      <div class="card">
+        <h3>Carrozzeria</h3>
+        <p>Campagne Google Ads + landing preventivo rapido.</p>
+    
+      </div>
+      <div class="card">
+        <h3>Studio Commercialista</h3>
+        <p>Landing chiara con CTA WhatsApp per richieste preventive.</p>
+      </div>
+      <div class="card">
+        <h3>Pubblica Assistenza</h3>
+        <p>Landing pubblica + area riservata con gestione turni e mezzi.</p>
+      </div>
+      <div class="card">
+        <h3>Avvocato</h3>
+        <p><i class="fas fa-scale-balanced"></i> Landing per studio legale, SEO locale e modulo appuntamenti.</p>
+      </div>
+      <div class="card">
+        <h3>Creazione Codici QR personalizzati</h3>
+        <p>Generazione di QR personalizzati per menu, volantini, biglietti da visita, pagamenti e link tracciabili.</p>
+      </div>
+    </div>
+  </section>
  <section id="come-funziona">
  <div class="container">
  <h2>Come funziona</h2>
@@ -92,6 +140,23 @@
  </div>
  </section>
 
+  <section id="prezzi">
+    <h2>Listino Prezzi</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Servizio</th>
+          <th>Prezzo</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Landing page base</td><td>300€</td></tr>
+        <tr><td>Landing page + SEO locale</td><td>500€</td></tr>
+        <tr><td>Landing page + Area riservata</td><td>800€</td></tr>
+        <tr><td>Pacchetto completo (SEO + Ads + Area riservata)</td><td>1000€</td></tr>
+      </tbody>
+    </table>
+  </section>
  <section id="faq">
  <div class="container">
  <h2>Domande frequenti</h2>
@@ -101,6 +166,11 @@
  </div>
  </section>
 
+  <section id="contatti">
+    <h2>Contatti</h2>
+    <p>WhatsApp: <a href="https://wa.me/39XXXXXXXXXX">+39 XXX XXX XXXX</a></p>
+    <p>Email: <a href="mailto:tuo@email.it">tuo@email.it</a></p>
+  </section>
  <section id="conta i">
  <div class="container">
  <h2>Conta aci</h2>
@@ -112,6 +182,9 @@
  </section>
 </main>
 
+  <footer>
+    <p>&copy; 2025 WebLab – Tutti i diritti riservati.</p>
+  </footer>
 <footer role="contentinfo">
  <div class="container" style="display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between">
  <p>© <span id="year"></span> Pubblica Assistenza – Genova.</p>
