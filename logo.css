@@ -1,0 +1,16 @@
+
+/* Logo styles for WebLab */
+.site-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+}
+.site-logo {
+  height: 48px;
+  width: auto;
+  image-rendering: -webkit-optimize-contrast;
+}
+@media (min-resolution: 2dppx) {
+  .site-logo { content: url("assets/logo/logo-weblab-400.png"); }
+}
