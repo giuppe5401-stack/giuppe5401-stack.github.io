@@ -3,13 +3,26 @@
   <url>
     <loc>https://giuppe5401-stack.github.io/</loc>
     <lastmod>2025-09-08</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
-  <loc>https://giuppe5401-stack.github.io/projects.html</loc>
-  <lastmod>2025-09-08</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.7</priority>
-</url>
-
+  <url>
+    <loc>https://giuppe5401-stack.github.io/about.html</loc>
+    <lastmod>2025-09-08</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://giuppe5401-stack.github.io/privacy.html</loc>
+    <lastmod>2025-09-08</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <!-- 👇 qui abbiamo aggiunto il nuovo progetto -->
+  <url>
+    <loc>https://giuppe5401-stack.github.io/projects.html</loc>
+    <lastmod>2025-09-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
 </urlset>
