@@ -1,27 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Home -->
   <url>
     <loc>https://giuppe5401-stack.github.io/</loc>
-    <lastmod>2025-08-27</lastmod>
+    <lastmod>2025-09-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
-  <url>
-    <loc>https://giuppe5401-stack.github.io/about.html</loc>
-    <lastmod>2025-08-27</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.6</priority>
-  </url>
+
+  <!-- Progetti (pagina vera, non #ancora) -->
   <url>
     <loc>https://giuppe5401-stack.github.io/projects.html</loc>
-    <lastmod>2025-08-27</lastmod>
+    <lastmod>2025-09-10</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
+
+  <!-- Aggiungi qui altre pagine REALI -->
+  <!--
   <url>
-    <loc>https://giuppe5401-stack.github.io/privacy.html</loc>
-    <lastmod>2025-08-27</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
+    <loc>https://giuppe5401-stack.github.io/servizi.html</loc>
+    <lastmod>2025-09-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
+  -->
+
 </urlset>
+
