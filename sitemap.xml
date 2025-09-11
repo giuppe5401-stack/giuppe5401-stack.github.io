@@ -4,28 +4,27 @@
   <!-- Home -->
   <url>
     <loc>https://giuppe5401-stack.github.io/</loc>
-    <lastmod>2025-09-10</lastmod>
+    <lastmod>2025-09-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
 
-  <!-- Progetti (pagina vera, non #ancora) -->
+  <!-- Pagina Progetti -->
   <url>
-    <loc>https://giuppe5401-stack.github.io/projects.html</loc>
-    <lastmod>2025-09-10</lastmod>
-    <changefreq>monthly</changefreq>
+    <loc>https://giuppe5401-stack.github.io/progetti.html</loc>
+    <lastmod>2025-09-11</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
-  <!-- Aggiungi qui altre pagine REALI -->
-  <!--
+  <!-- Pagina Privacy -->
   <url>
-    <loc>https://giuppe5401-stack.github.io/servizi.html</loc>
-    <lastmod>2025-09-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://giuppe5401-stack.github.io/privacy.html</loc>
+    <lastmod>2025-09-11</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
   </url>
-  -->
 
 </urlset>
+
 
