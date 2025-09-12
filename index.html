@@ -33,12 +33,19 @@
   <main>
     <!-- HERO -->
     <section class="hero container" id="intro">
+      <p class="eyebrow">Ciao Genova! 👋</p>
       <h1>Creazione siti web e soluzioni digitali a Genova</h1>
-      <p class="lead">Realizziamo siti performanti, ottimizzati per la SEO locale e supportati da campagne Google Ads. Strategia chiara, misurazione costante e supporto vicino.</p>
+      <p class="lead">Siti rapidi e sicuri, SEO locale che ti fa trovare e campagne Google Ads orientate ai risultati. Strategia chiara, numeri trasparenti e un tocco leggero.</p>
       <div class="cta">
         <a href="#contatti" class="btn">Richiedi preventivo</a>
         <a href="#prezzi" class="btn-ghost">Vedi prezzi</a>
       </div>
+      <ul class="badges" aria-label="Punti di forza">
+        <li>⚡ Performance</li>
+        <li>🧭 SEO locale</li>
+        <li>🔐 GDPR</li>
+      </ul>
+      <div class="blob" aria-hidden="true"></div>
     </section>
 
     <!-- SERVIZI -->
@@ -46,16 +53,19 @@
       <h2>I nostri servizi</h2>
       <div class="cards">
         <article class="card">
+          <div class="emoji">🎯</div>
           <h3>Siti web &amp; landing</h3>
-          <p>Progettazione UX/UI, contenuti e setup tecnico. Mobile-first, veloci e sicuri.</p>
+          <p>UX/UI, copy e setup tecnico. Mobile-first, veloci e accessibili.</p>
         </article>
         <article class="card">
+          <div class="emoji">📍</div>
           <h3>SEO locale</h3>
-          <p>On-page, pagine locali e Google Business Profile per farti trovare nella tua zona.</p>
+          <p>On-page, pagine locali e Google Business Profile per farti trovare vicino a te.</p>
         </article>
         <article class="card">
+          <div class="emoji">📣</div>
           <h3>Google Ads</h3>
-          <p>Campagne orientate all’acquisizione con tracciamento conversioni e report mensili.</p>
+          <p>Campagne con tracciamento conversioni, report chiari e A/B test.</p>
         </article>
       </div>
     </section>
@@ -67,7 +77,7 @@
         <li><strong>Analisi &amp; obiettivi</strong> — pubblico, proposta di valore, KPI.</li>
         <li><strong>Design &amp; contenuti</strong> — wireframe, copy, componenti riutilizzabili.</li>
         <li><strong>Sviluppo &amp; SEO</strong> — performance, accessibilità, schema markup.</li>
-        <li><strong>Misurazione</strong> — setup analytics, dashboard e ottimizzazioni.</li>
+        <li><strong>Misurazione</strong> — analytics, dashboard e ottimizzazioni continue.</li>
       </ol>
     </section>
 
@@ -83,8 +93,9 @@
             <li>SEO on-page</li>
             <li>Tracciamento contatti</li>
           </ul>
+          <a href="#contatti" class="btn block">Chiedi info</a>
         </article>
-        <article class="price">
+        <article class="price featured" aria-label="Piano consigliato">
           <h3>Sito vetrina</h3>
           <p class="value">da 700€</p>
           <ul>
@@ -92,6 +103,7 @@
             <li>Moduli contatto</li>
             <li>Ottimizzazione performance</li>
           </ul>
+          <a href="#contatti" class="btn block">Parti ora</a>
         </article>
         <article class="price">
           <h3>Gestione Ads</h3>
@@ -101,6 +113,7 @@
             <li>Report mensili</li>
             <li>A/B test</li>
           </ul>
+          <a href="#contatti" class="btn block">Parliamone</a>
         </article>
       </div>
       <p class="note">I prezzi sono indicativi e variano in base a complessità e tempistiche.</p>
@@ -109,7 +122,7 @@
     <!-- CONTATTI -->
     <section class="container" id="contatti">
       <h2>Contatti</h2>
-      <form class="contact" onsubmit="event.preventDefault(); alert('Grazie! Ti risponderemo a breve.');">
+      <form class="contact" onsubmit="event.preventDefault(); alert('Grazie! Ti risponderemo a breve 😊');">
         <div class="grid">
           <label>Nome
             <input type="text" name="nome" required>
@@ -139,7 +152,7 @@
   </footer>
 
   <script>
-    function toggleMenu() { 
+    function toggleMenu() {{ 
       var b = document.body; 
       var btn = document.querySelector('.burger');
       var menu = document.getElementById('menu');
@@ -147,7 +160,7 @@
       b.classList.toggle('open', open);
       btn.setAttribute('aria-expanded', open ? 'true' : 'false');
       menu.hidden = !open;
-    }
+    }}
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 </body>
