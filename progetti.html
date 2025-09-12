@@ -4,20 +4,113 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Progetti — &amp;weblab</title>
+  <meta name="description" content="Case study &amp;weblab: siti web, SEO locale e campagne Ads con risultati misurabili.">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header class="topbar">
     <nav class="container">
       <a class="brand" href="index.html"><img src="assets/logo/logo.svg" alt="&amp;weblab logo" height="28"></a>
-      <div class="menu"><a href="index.html#servizi">Servizi</a><a href="index.html#contatti" class="btn">Contatti</a></div>
+      <button class="burger" aria-label="Apri menu" aria-expanded="false" aria-controls="menu" onclick="toggleMenu()"><span></span><span></span><span></span></button>
+      <div id="menu" class="menu"><a href="index.html#servizi">Servizi</a><a href="index.html#prezzi">Prezzi</a><a href="index.html#contatti" class="btn">Contatti</a></div>
     </nav>
   </header>
+
   <main class="container">
-    <h1>Progetti</h1>
-    <p class="alt">Questa è una pagina segnaposto. Inserisci qui i tuoi case study con immagini e risultati.</p>
+    <section class="projects-hero">
+      <h1>Progetti</h1>
+      <p class="alt">Una selezione di lavori tra siti web, SEO locale e Google Ads. Ogni progetto è guidato da obiettivi chiari e KPI misurabili.</p>
+      <ul class="filters" role="tablist" aria-label="Filtri progetti">
+        <li><button class="active" data-filter="all" role="tab" aria-selected="true">Tutti</button></li>
+        <li><button data-filter="siti" role="tab">Siti web</button></li>
+        <li><button data-filter="seo" role="tab">SEO</button></li>
+        <li><button data-filter="ads" role="tab">Ads</button></li>
+      </ul>
+    </section>
+
+    <section class="grid-projects" id="projects">
+      <article class="project-card" data-cat="siti">
+        <div class="project-thumb"><img src="assets/projects/thumb-1.svg" alt="Anteprima landing page"></div>
+        <div class="project-body">
+          <h3>Erboristeria Genova — Landing</h3>
+          <div class="tags"><span class="tag">UX/UI</span><span class="tag">Copy</span><span class="tag">SEO on-page</span></div>
+          <div class="metrics"><span>↑ +120% traffico</span><span>CTR 6.2%</span><span>Lead +38%</span></div>
+        </div>
+      </article>
+
+      <article class="project-card" data-cat="siti">
+        <div class="project-thumb"><img src="assets/projects/thumb-2.svg" alt="Anteprima sito vetrina"></div>
+        <div class="project-body">
+          <h3>Studio Dentistico — Sito vetrina</h3>
+          <div class="tags"><span class="tag">Responsive</span><span class="tag">Performance</span></div>
+          <div class="metrics"><span>90+ Lighthouse</span><span>Tempo medio 2:15</span></div>
+        </div>
+      </article>
+
+      <article class="project-card" data-cat="seo">
+        <div class="project-thumb"><img src="assets/projects/thumb-3.svg" alt="Anteprima SEO locale"></div>
+        <div class="project-body">
+          <h3>Idraulico Genova — SEO locale</h3>
+          <div class="tags"><span class="tag">GBP</span><span class="tag">Schema</span></div>
+          <div class="metrics"><span>Top 3 ricerche locali</span><span>+52% chiamate</span></div>
+        </div>
+      </article>
+
+      <article class="project-card" data-cat="ads">
+        <div class="project-thumb"><img src="assets/projects/thumb-4.svg" alt="Anteprima Google Ads"></div>
+        <div class="project-body">
+          <h3>Carrozzeria — Google Ads</h3>
+          <div class="tags"><span class="tag">Ricerca</span><span class="tag">Rete Display</span></div>
+          <div class="metrics"><span>CPA -28%</span><span>Conv. +31%</span></div>
+        </div>
+      </article>
+
+      <article class="project-card" data-cat="siti">
+        <div class="project-thumb"><img src="assets/projects/thumb-5.svg" alt="Anteprima e-commerce"></div>
+        <div class="project-body">
+          <h3>Negozio Artigiano — E‑commerce</h3>
+          <div class="tags"><span class="tag">Catalogo</span><span class="tag">Checkout</span></div>
+          <div class="metrics"><span>+24% carrelli</span><span>Velocità TTFB 0.2s</span></div>
+        </div>
+      </article>
+
+      <article class="project-card" data-cat="ads">
+        <div class="project-thumb"><img src="assets/projects/thumb-6.svg" alt="Anteprima campagne Ads"></div>
+        <div class="project-body">
+          <h3>Commercialista — Campagne Ads</h3>
+          <div class="tags"><span class="tag">Lead Gen</span><span class="tag">A/B Test</span></div>
+          <div class="metrics"><span>CTR 7.1%</span><span>Qualità 9/10</span></div>
+        </div>
+      </article>
+    </section>
+
+    <section style="padding-top:10px">
+      <p class="alt">Vuoi i numeri completi? Ti mando i case study dettagliati via email.</p>
+      <a href="index.html#contatti" class="btn">Richiedi case study</a>
+    </section>
   </main>
-  <footer class="footer"><div class="container"><small>© <span id="year"></span> &amp;weblab</small></div></footer>
-  <script>document.getElementById('year').textContent=new Date().getFullYear()</script>
+
+  <footer class="footer">
+    <div class="container">
+      <small>© <span id="year"></span> &amp;weblab — Tutti i diritti riservati.</small>
+    </div>
+  </footer>
+
+  <script>
+    function toggleMenu(){var b=document.body,btn=document.querySelector('.burger'),menu=document.getElementById('menu'),o=!b.classList.contains('open');b.classList.toggle('open',o);if(btn)btn.setAttribute('aria-expanded',o?'true':'false');if(menu)menu.hidden=!o}
+    document.getElementById('year').textContent=new Date().getFullYear();
+    // Filters
+    document.querySelectorAll('.filters button').forEach(function(btn){
+      btn.addEventListener('click', function(){
+        document.querySelectorAll('.filters button').forEach(b=>b.classList.remove('active'));
+        btn.classList.add('active');
+        var f = btn.getAttribute('data-filter');
+        document.querySelectorAll('.project-card').forEach(function(card){
+          var cat = card.getAttribute('data-cat');
+          card.classList.toggle('hidden', !(f==='all' || f===cat));
+        });
+      });
+    });
+  </script>
 </body>
 </html>
