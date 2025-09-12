@@ -1,61 +1,255 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="it">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Creazione siti web Genova — &amp;weblab</title>
-  <meta name="description" content="Creazione siti web Genova: &amp;weblab realizza siti moderni, landing page e campagne Google Ads con SEO locale e misurazione dei risultati.">
-  <link rel="stylesheet" href="style.css">
+  <meta name="description" content="& WebLab — Landing page, SEO, Ads e soluzioni digitali su misura per far crescere la tua attività.">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <title>& WebLab — Soluzioni digitali che convertono</title>
+  <link rel="preload" href="assets/img/mockup.svg" as="image">
+  <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
-  <header class="topbar">
-    <nav class="container">
-      <a class="brand" href="#"><img src="assets/logo/logo.svg" alt="&amp;weblab logo" height="28"></a>
-      <button class="burger" aria-label="Apri menu" aria-expanded="false" aria-controls="menu" onclick="toggleMenu()"><span></span><span></span><span></span></button>
-      <div id="menu" class="menu">
+  <header class="header">
+    <div class="container nav" role="navigation" aria-label="Principale">
+      <div class="logo">
+        <img src="assets/img/logo.svg" alt="& WebLab logo" width="120" height="24" loading="eager">
+        <span class="badge" aria-label="Disponibilità limitata">Nuovi progetti: posti limitati</span>
+      </div>
+      <nav class="badges" aria-label="Sezioni">
         <a href="#servizi">Servizi</a>
-        <a href="progetti.html">Progetti</a>
-        <a href="#prezzi">Prezzi</a>
-        <a href="#contatti" class="btn">Contatti</a>
+        <a href="#processo">Processo</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contatti" class="btn btn-ghost">Contatti</a>
+      </nav>
+      <div class="actions">
+        <a href="#contatti" class="btn btn-primary" data-track="cta_header">Richiedi preventivo</a>
       </div>
-    </nav>
+    </div>
   </header>
+
   <main>
-    <section class="hero container" id="intro">
-      <p class="eyebrow">Ciao Genova! 👋</p>
-      <h1>Creazione siti web e soluzioni digitali a Genova</h1>
-      <p class="lead">Siti rapidi e sicuri, SEO locale e campagne Google Ads orientate ai risultati.</p>
-      <div class="cta"><a href="#contatti" class="btn">Richiedi preventivo</a><a href="#prezzi" class="btn-ghost">Vedi prezzi</a></div>
-    </section>
-    <section class="container" id="servizi">
-      <h2>I nostri servizi</h2>
-      <div class="cards">
-        <article class="card"><div class="emoji">🎯</div><h3>Siti web &amp; landing</h3><p>UX/UI e performance.</p></article>
-        <article class="card"><div class="emoji">📍</div><h3>SEO locale</h3><p>On-page e GBP.</p></article>
-        <article class="card"><div class="emoji">📣</div><h3>Google Ads</h3><p>Acquisizione e A/B test.</p></article>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <span class="badge">Marketing & Sviluppo</span>
+          <h1>Soluzioni digitali su misura per elevare la tua visibilità e convertire contatti in clienti</h1>
+          <p class="lead">Landing page, SEO, campagne Ads e strumenti smart per attività locali e professionisti. Strategia chiara, esecuzione rapida, risultati misurabili.</p>
+          <div class="badges" aria-label="Punti di forza">
+            <span class="pill">Progettazione UX</span>
+            <span class="pill">SEO locale</span>
+            <span class="pill">Google Ads</span>
+            <span class="pill">QR con tracciamento</span>
+          </div>
+          <p>
+            <a href="#contatti" class="btn btn-primary" data-track="cta_hero">Parliamo del tuo progetto</a>
+            <a href="#servizi" class="btn btn-ghost">Vedi servizi</a>
+          </p>
+          <div class="kpi" aria-label="Indicatori chiave">
+            <div class="item"><strong>+70%</strong><br>Visite locali</div>
+            <div class="item"><strong>-40%</strong><br>Costo per lead</div>
+            <div class="item"><strong>2‑4 sett.</strong><br>Go‑live tipico</div>
+          </div>
+        </div>
+        <div>
+          <img src="assets/img/mockup.svg" alt="Mockup interfaccia sito su laptop e smartphone" width="720" height="420" loading="lazy">
+        </div>
       </div>
     </section>
-    <section class="container" id="prezzi">
-      <h2>Prezzi</h2>
-      <div class="prices">
-        <article class="price"><h3>Landing</h3><p class="value">da 400€</p></article>
-        <article class="price featured"><h3>Vetrina</h3><p class="value">da 700€</p></article>
-        <article class="price"><h3>Ads</h3><p class="value">da 250€/mese</p></article>
+
+    <section id="servizi" class="section alt">
+      <div class="container">
+        <h2>Servizi</h2>
+        <div class="card-grid" role="list">
+          <article class="card" role="listitem">
+            <h3>Landing Page ad alta conversione</h3>
+            <p>Design responsive, copy mirato e tracciamento eventi. Pensate per trasformare traffico in richieste concrete.</p>
+            <ul>
+              <li>Layout ottimizzato per mobile</li>
+              <li>Form contatti con validazione</li>
+              <li>Integrazione WhatsApp</li>
+            </ul>
+          </article>
+          <article class="card" role="listitem">
+            <h3>SEO Locale & Generale</h3>
+            <p>Analisi keyword, ottimizzazione tecnica e contenuti che ti fanno trovare quando conta.</p>
+            <ul>
+              <li>Ottimizzazione on‑page</li>
+              <li>Google Business Profile</li>
+              <li>Strategia contenuti</li>
+            </ul>
+          </article>
+          <article class="card" role="listitem">
+            <h3>Campagne Ads mirate</h3>
+            <p>Setup, ottimizzazione e report chiari. Spendi dove rende, aumenta il ROI.</p>
+            <ul>
+              <li>Google & Meta Ads</li>
+              <li>Tracciamento conversioni</li>
+              <li>Report mensili sintetici</li>
+            </ul>
+          </article>
+          <article class="card" role="listitem">
+            <h3>QR Code personalizzati</h3>
+            <p>Collega volantino, vetrina o biglietto direttamente alla tua offerta. Con tracciamento del traffico.</p>
+            <ul>
+              <li>Design su brand</li>
+              <li>Link dinamici</li>
+              <li>Statistiche click</li>
+            </ul>
+          </article>
+          <article class="card" role="listitem">
+            <h3>Soluzioni su misura</h3>
+            <p>Aree riservate semplici, gestione risorse/turni, moduli dedicati. Ottimizza i processi interni.</p>
+            <ul>
+              <li>Accessi protetti</li>
+              <li>Gestione dati</li>
+              <li>Form personalizzati</li>
+            </ul>
+          </article>
+          <article class="card" role="listitem">
+            <h3>Consulenza & Coaching</h3>
+            <p>Sessioni 1:1 per impostare strategia, budget e priorità. Focus su risultati.</p>
+            <ul>
+              <li>Audit rapido</li>
+              <li>Piano d’azione</li>
+              <li>Metriche da monitorare</li>
+            </ul>
+          </article>
+        </div>
       </div>
     </section>
-    <section class="container" id="contatti">
-      <h2>Contatti</h2>
-      <form class="contact" onsubmit="event.preventDefault(); alert('Grazie! Ti risponderemo a breve 😊');">
-        <div class="grid"><label>Nome<input type="text" required></label><label>Email<input type="email" required></label></div>
-        <label>Messaggio<textarea rows="5" required></textarea></label>
-        <button class="btn" type="submit">Invia</button>
-      </form>
+
+    <section id="processo" class="section">
+      <div class="container">
+        <h2>Come lavoriamo</h2>
+        <div class="card-grid">
+          <div class="card">
+            <h3>1) Analisi</h3>
+            <p>Capire obiettivi e target. Audit sintetico di sito e canali esistenti.</p>
+          </div>
+          <div class="card">
+            <h3>2) Proposta</h3>
+            <p>Roadmap e preventivo chiari. Nessun costo nascosto.</p>
+          </div>
+          <div class="card">
+            <h3>3) Realizzazione</h3>
+            <p>Design, sviluppo, copy. Test cross‑device e performance.</p>
+          </div>
+          <div class="card">
+            <h3>4) Lancio</h3>
+            <p>Setup tracciamento, QA finale, messa online.</p>
+          </div>
+          <div class="card">
+            <h3>5) Ottimizzazione</h3>
+            <p>Miglioramenti continui su ciò che conta: lead e vendite.</p>
+          </div>
+          <div class="card">
+            <h3>6) Report</h3>
+            <p>Risultati leggibili e azionabili, senza gergo inutile.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="portfolio" class="section alt">
+      <div class="container">
+        <h2>Portfolio / Casi reali</h2>
+        <div class="card-grid">
+          <div class="card">
+            <h3>Erboristeria locale</h3>
+            <p>Landing + SEO locale → <strong>+70% visite</strong>, <strong>+30% ordini</strong> in 3 mesi.</p>
+          </div>
+          <div class="card">
+            <h3>Carrozzeria</h3>
+            <p>Ads + pagina preventivo → <strong>-40% costo per lead</strong>.</p>
+          </div>
+          <div class="card">
+            <h3>Studio Commercialista</h3>
+            <p>Landing + WhatsApp → <strong>+50% richieste</strong>.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" class="section">
+      <div class="container faq">
+        <h2>Domande frequenti</h2>
+        <details>
+          <summary>In quanto tempo vedrò risultati?</summary>
+          <p>Landing/Ads: in genere entro 2‑4 settimane. SEO: progressivo, 2‑3 mesi per impatti visibili.</p>
+        </details>
+        <details>
+          <summary>Posso partire con budget ridotto?</summary>
+          <p>Sì. Impostiamo un MVP e cresciamo in base ai risultati.</p>
+        </details>
+        <details>
+          <summary>Gestite anche contenuti e foto?</summary>
+          <p>Sì, supportiamo copy e creatività base; per shooting dedichiamo partner su richiesta.</p>
+        </details>
+      </div>
+    </section>
+
+    <section id="contatti" class="section alt">
+      <div class="container">
+        <h2>Parliamo del tuo progetto</h2>
+        <form id="contact-form" class="form" action="#" method="post" novalidate>
+          <div>
+            <label for="name">Nome e cognome</label>
+            <input id="name" name="name" autocomplete="name" required>
+          </div>
+          <div>
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" autocomplete="email" required>
+          </div>
+          <div class="full">
+            <label for="company">Azienda (opzionale)</label>
+            <input id="company" name="company" autocomplete="organization">
+          </div>
+          <div class="full">
+            <label for="service">Servizio di interesse</label>
+            <select id="service" name="service">
+              <option>Landing Page</option>
+              <option>SEO</option>
+              <option>Google Ads</option>
+              <option>QR con tracciamento</option>
+              <option>Soluzione su misura</option>
+              <option>Consulenza</option>
+            </select>
+          </div>
+          <div class="full">
+            <label for="message">Messaggio</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+          </div>
+          <div class="full">
+            <button class="btn btn-primary" type="submit" data-track="cta_contact">Invia richiesta</button>
+            <p class="notice">Compilando il form accetti l'informativa privacy. Nessuno spam, mai.</p>
+          </div>
+        </form>
+      </div>
     </section>
   </main>
-  <footer class="footer"><div class="container"><nav class="foot-nav"><a href="progetti.html">Progetti</a><a href="privacy.html">Privacy</a></nav><small>© <span id="year"></span> &amp;weblab</small></div></footer>
-  <script>
-    function toggleMenu(){var b=document.body,btn=document.querySelector('.burger'),menu=document.getElementById('menu'),o=!b.classList.contains('open');b.classList.toggle('open',o);btn.setAttribute('aria-expanded',o?'true':'false');menu.hidden=!o}
-    document.getElementById('year').textContent=new Date().getFullYear();
-  </script>
+
+  <footer class="footer">
+    <div class="container">
+      <div style="display:flex; align-items:center; justify-content:space-between; gap:1rem; flex-wrap:wrap;">
+        <div style="display:flex; align-items:center; gap:.75rem;">
+          <img src="assets/img/logo.svg" alt="& WebLab logo" width="100" height="20" loading="lazy">
+          <span>&copy; <span id="year"></span> & WebLab. Tutti i diritti riservati.</span>
+        </div>
+        <div class="badges">
+          <a href="#servizi">Servizi</a>
+          <a href="#processo">Processo</a>
+          <a href="#portfolio">Portfolio</a>
+          <a href="#faq">FAQ</a>
+          <a href="#contatti">Contatti</a>
+        </div>
+      </div>
+      <p class="notice">Questo sito utilizza un tracciamento leggero e anonimo per migliorare l'esperienza.</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/script.js"></script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
