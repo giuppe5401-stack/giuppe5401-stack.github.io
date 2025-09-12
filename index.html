@@ -1,47 +1,120 @@
 <!doctype html>
-<html lang="it"><head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="& WebLab — Landing chiare e veloci."><title>& WebLab — Landing che convertono</title>
-<link rel="stylesheet" href="assets/css/styles.css"></head>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>& WebLab — Landing chiare che convertono</title>
+  <meta name="description" content="& WebLab: landing page e siti su misura, mobile-first e veloci. Strategia semplice, esecuzione rapida, risultati misurabili.">
+  <link rel="canonical" href="https://www.tuodominio.it/">
+  <meta property="og:title" content="& WebLab — Landing chiare che convertono">
+  <meta property="og:description" content="Landing e siti su misura, veloci e misurabili.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/img/hero.svg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/img/logo.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/img/hero.svg" as="image">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Organization",
+    "name":"& WebLab",
+    "url":"https://www.tuodominio.it/",
+    "logo":"assets/img/logo.svg",
+    "sameAs":[]
+  }
+  </script>
+</head>
 <body>
-<header class="header"><div class="container nav">
-  <div class="logo"><img src="assets/img/logo.svg" alt="& WebLab" width="120" height="24"></div>
-  <button id="menu-toggle" class="hamburger" aria-label="Apri menu">Menu</button>
-  <nav id="site-menu" class="menu"><a href="#servizi">Servizi</a><a href="#prezzi">Prezzi</a><a href="#portfolio">Portfolio</a><a href="#contatti" class="btn btn-ghost">Contatti</a></nav>
-</div></header>
-<main>
-<section class="hero"><div class="container hero-grid">
-  <div><h1>Landing page su misura per portare contatti veri</h1><p class="lead">Design minimal e tracciamento. Pensate per smartphone.</p>
-    <div class="btn-row"><a href="#prezzi" class="btn btn-primary">Vedi prezzi</a> <a href="#servizi" class="btn btn-ghost">Come lavoriamo</a></div>
-  </div>
-  <div><img src="assets/img/hero.svg" alt="Illustrazione landing" width="800" height="420"></div>
-</div></section>
-<section id="servizi" class="section alt"><div class="container">
-  <h2>Servizi essenziali</h2>
-  <div class="grid-3">
-    <article class="card"><h3>Landing ad alta conversione</h3><ul><li>UX mobile-first</li><li>Copy e CTA</li><li>Tracking</li></ul></article>
-    <article class="card"><h3>Creazioni Siti Web</h3><ul><li>Vetrina moderna</li><li>SEO base</li><li>Dominio/hosting (opz.)</li></ul></article>
-    <article class="card"><h3>Sviluppo su misura</h3><ul><li>Aree riservate</li><li>Form/processi</li><li>Integrazioni</li></ul></article>
-  </div>
-</div></section>
-<section id="prezzi" class="section"><div class="container">
-  <h2>Prezzi</h2>
-  <div class="pricing">
-    <div class="card"><h3>Landing Page</h3><p><strong>da 400€</strong></p></div>
-    <div class="card"><h3>Creazioni Siti Web</h3><p><strong>da 600€</strong></p></div>
-    <div class="card"><h3>Sviluppo Siti Web</h3><p><strong>da 600€</strong></p></div>
-    <div class="card"><h3>Soluzioni su misura</h3><p><strong>su preventivo</strong></p></div>
-  </div>
-</div></section>
-<section id="portfolio" class="section alt"><div class="container">
-  <h2>Portfolio</h2>
-  <div class="grid-3"><div class="card"><h3>Erboristeria</h3><p>+70% visite</p></div><div class="card"><h3>Carrozzeria</h3><p>-40% costo/lead</p></div><div class="card"><h3>Studio</h3><p>+50% contatti</p></div></div>
-</div></section>
-<section id="contatti" class="section"><div class="container">
-  <h2>Contatti</h2>
-  <form id="contact-form" class="form" action="#" method="post"><input name="name" placeholder="Nome" required> <input name="email" type="email" placeholder="Email" required> <textarea name="message" rows="4" placeholder="Messaggio" required></textarea> <button class="btn btn-primary" type="submit">Invia</button></form>
-</div></section>
-</main>
-<footer class="footer"><div class="container"><span>&copy; <span id="year"></span> & WebLab.</span></div></footer>
-<script src="assets/js/script.js"></script><script>document.getElementById('year').textContent=new Date().getFullYear();</script>
-</body></html>
+  <a class="skip" href="#main">Salta al contenuto</a>
+  <header class="header" role="banner">
+    <div class="container nav" role="navigation" aria-label="Principale">
+      <div class="logo"><img src="assets/img/logo.svg" alt="& WebLab" width="120" height="24" loading="eager"></div>
+      <button id="menu-toggle" class="hamburger" aria-label="Apri menu">Menu</button>
+      <nav id="site-menu" class="menu" aria-label="Sezioni">
+        <a href="#servizi">Servizi</a>
+        <a href="#prezzi">Prezzi</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#contatti" class="btn btn-ghost">Contatti</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <span class="badge">Chiaro. Veloce. Misurabile.</span>
+          <h1>Landing page su misura per portare contatti veri, non solo visite</h1>
+          <p class="lead">Design minimal, copy orientato all’azione e tracciamento. Pensate per smartphone, veloci da caricare.</p>
+          <div class="btn-row">
+            <a href="#prezzi" class="btn btn-primary">Vedi prezzi</a>
+            <a href="#servizi" class="btn btn-ghost">Come lavoriamo</a>
+          </div>
+        </div>
+        <div><img src="assets/img/hero.svg" alt="Esempio interfaccia landing" width="800" height="420" loading="lazy"></div>
+      </div>
+    </section>
+
+    <section id="servizi" class="section alt">
+      <div class="container">
+        <h2>Servizi essenziali</h2>
+        <div class="grid-3">
+          <article class="card"><h3>Landing ad alta conversione</h3><ul class="list"><li>UX mobile-first</li><li>Copy e call‑to‑action</li><li>Tracciamento eventi</li></ul></article>
+          <article class="card"><h3>Creazioni Siti Web</h3><ul class="list"><li>Vetrina moderna</li><li>SEO on‑page</li><li>Dominio/hosting (opz.)</li></ul></article>
+          <article class="card"><h3>Sviluppo su misura</h3><ul class="list"><li>Aree riservate semplici</li><li>Form/processi dedicati</li><li>Integrazioni leggere</li></ul></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="prezzi" class="section">
+      <div class="container">
+        <h2>Prezzi trasparenti</h2>
+        <div class="pricing">
+          <div class="price"><h3>Landing Page</h3><p><strong>da 400€</strong></p><ul class="list"><li>Design responsive</li><li>Copy & form</li><li>Go‑live in 2–4 sett.</li></ul></div>
+          <div class="price"><h3>Creazioni Siti Web</h3><p><strong>da 600€</strong></p><ul class="list"><li>Pagina/e vetrina</li><li>SEO base</li><li>Assistenza al lancio</li></ul></div>
+          <div class="price"><h3>Sviluppo Siti Web</h3><p><strong>da 600€</strong></p><ul class="list"><li>Componenti personalizzati</li><li>Login/prenotazioni</li><li>Supporto tecnico</li></ul></div>
+          <div class="price"><h3>Soluzioni su misura</h3><p><strong>su preventivo</strong></p><ul class="list"><li>Aree riservate</li><li>Gestione dati/processi</li><li>Integrazioni</li></ul></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="portfolio" class="section alt">
+      <div class="container">
+        <h2>Risultati</h2>
+        <div class="grid-3">
+          <div class="card"><h3>Erboristeria</h3><p>Landing + SEO → <strong>+70% visite</strong> e <strong>+30% richieste</strong>.</p></div>
+          <div class="card"><h3>Carrozzeria</h3><p>Ads + preventivo → <strong>-40% costo/lead</strong>.</p></div>
+          <div class="card"><h3>Studio</h3><p>WhatsApp lead → <strong>+50% contatti</strong>.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contatti" class="section">
+      <div class="container">
+        <h2>Parliamo del tuo progetto</h2>
+        <form id="contact-form" class="form" action="#" method="post" novalidate>
+          <div><label for="name">Nome</label><input id="name" name="name" required autocomplete="name"></div>
+          <div><label for="email">Email</label><input id="email" name="email" type="email" required autocomplete="email"></div>
+          <div class="full"><label for="message">Messaggio</label><textarea id="message" name="message" rows="5" required></textarea></div>
+          <div class="full"><button class="btn btn-primary" type="submit">Invia richiesta</button><p class="notice">Form demo: collega un provider (Formspree, serverless, ecc.).</p></div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div style="display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;">
+        <div style="display:flex;align-items:center;gap:.75rem;"><img src="assets/img/logo.svg" alt="& WebLab" width="100" height="20" loading="lazy"><span>&copy; <span id="year"></span> & WebLab.</span></div>
+        <div class="menu"><a href="#servizi">Servizi</a><a href="#prezzi">Prezzi</a><a href="#portfolio">Portfolio</a><a href="#contatti">Contatti</a></div>
+      </div>
+      <p class="notice">Privacy · Cookie · Termini (collega qui le pagine legali)</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/script.js" defer></script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

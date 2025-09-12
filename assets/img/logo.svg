@@ -1,1 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="180" height="36" viewBox="0 0 180 36" role="img" aria-label="& WebLab"><text x="0" y="26" font-family="Inter, system-ui" font-weight="800" font-size="22" fill="#0f172a">&amp; WebLab</text></svg>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="180" height="36" viewBox="0 0 180 36" role="img" aria-labelledby="t d">
+  <title id="t">& WebLab</title><desc id="d">Logo tipografico minimal</desc>
+  <text x="0" y="26" font-family="Inter, system-ui, Segoe UI, Roboto" font-weight="800" font-size="22" fill="#0f172a">&amp; WebLab</text>
+</svg>
