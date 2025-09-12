@@ -1,41 +1,76 @@
-html { scroll-behavior: smooth; font-family: Arial, sans-serif; color: #fff; background: #0f4a43; margin: 0; }
-body { margin: 0; padding: 0; }
+:root{
+  --bg: #0e3d36;
+  --fg: #f7fffd;
+  --ink:#0e1b18;
+  --brand:#00c2a8;
+  --brand-2:#ffd166;
+  --muted:#637a74;
+  --card:#ffffff;
+  --radius:18px;
+  --space: clamp(16px, 2.5vw, 28px);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font:16px/1.6 'Inter', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;color:var(--ink);background:#fff}
+.container{width:min(1100px,92%);margin-inline:auto}
 
-header { background: #000; padding: 10px 20px; }
-nav { display: flex; gap: 20px; justify-content: center; }
-nav a { color: #fff; text-decoration: none; font-weight: bold; }
-nav a:hover { text-decoration: underline; }
+/* Topbar */
+.topbar{position:sticky;top:0;background:#000;color:#fff;z-index:10}
+.topbar nav{display:flex;align-items:center;justify-content:space-between;padding:10px 0}
+.brand{color:#fff;text-decoration:none;font-weight:800;font-size:18px;letter-spacing:.2px}
+.brand .sparkle{margin-left:6px;color:var(--brand-2)}
+.menu a{color:#fff;text-decoration:none;margin-left:16px}
+.btn{background:var(--brand);color:#062b27;border-radius:14px;padding:10px 14px;text-decoration:none;font-weight:700;display:inline-block}
+.btn:hover{filter:brightness(.95)}
+.burger{display:none;gap:4px;background:transparent;border:0;cursor:pointer}
+.burger span{display:block;width:22px;height:2px;background:#fff}
 
-.hero { text-align: center; padding: 80px 20px; }
-.hero-brand { font-size: 40px; font-weight: bold; }
-.hero h1 { font-size: 28px; margin: 10px 0; }
-.hero p { font-size: 18px; margin-bottom: 20px; }
+/* Hero */
+.hero{padding:calc(var(--space)*3) 0;text-align:center;color:var(--fg);background:linear-gradient(135deg,var(--bg),#124b43 60%);border-bottom-left-radius:28px;border-bottom-right-radius:28px;position:relative;overflow:hidden}
+.hero .eyebrow{margin:0 0 6px;color:#c7fffa;font-weight:700;letter-spacing:.3px;text-transform:uppercase;font-size:12px}
+.hero h1{margin:.1em 0 .2em;font-size: clamp(30px, 4.5vw, 46px);line-height:1.15}
+.hero .lead{max-width:800px;margin:0 auto var(--space);color:#e8fffb}
+.cta a{margin:0 6px}
+.stickers{position:absolute;inset:auto -10px -10px auto;display:flex;gap:10px;opacity:.4;font-size:28px;}
 
-.buttons { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
-.btn { display:inline-block; text-decoration:none; padding:12px 24px; border-radius:8px; font-weight:700; transition:.25s; background:#fff; color:#000; }
-.btn.black { background:#000; color:#fff; }
-.btn.black:hover { background:#333; color:#fff; }
+/* Sections */
+main section{padding:calc(var(--space)*2) 0}
+h2{font-size: clamp(22px,3.2vw,32px);margin:0 0 8px}
+h3{margin:0 0 6px}
 
-#chisiamo { padding: 60px 20px; background: #fff; color: #000; border-top: 1px solid #ddd; text-align: center; }
-#chisiamo h2 { font-size: 28px; margin-bottom: 20px; color: #222; }
-#chisiamo .chi-siamo-content { max-width: 800px; margin: 0 auto; font-size: 18px; line-height: 1.6; }
+/* Cards servizi playful */
+.cards{display:grid;gap:var(--space);grid-template-columns:repeat(auto-fit,minmax(230px,1fr));margin-top:var(--space)}
+.card{border:2px dashed #d8efe9;border-radius:var(--radius);padding:18px;background:var(--card);box-shadow:0 6px 20px rgba(0,0,0,.04)}
+.card .emoji{font-size:28px;margin-bottom:8px}
+.card p{color:var(--muted)}
 
-#servizi { padding: 60px 20px; }
-#servizi h2 { text-align: center; margin-bottom: 30px; }
+/* Why */
+.why .bullets{display:grid;gap:10px;padding-left:18px}
+.why li{margin-left:4px}
 
-.cards { display:grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap:20px; }
-.card { background: rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.15); border-radius:12px; padding:20px; min-height:180px; }
+/* CTA bar */
+.cta-bar{background:#fff8e6;border-top:2px solid #ffe3a4;border-bottom:2px solid #ffe3a4}
+.cta-bar__inner{display:flex;align-items:center;justify-content:space-between;gap:16px}
+.cta-bar .btn{background:var(--brand-2);color:#3a2a00}
 
-#prezzi { padding:60px 20px; background:#f9f9f9; color:#000; border-top:1px solid #ddd; text-align:center; }
-#prezzi h2 { font-size:28px; margin-bottom:30px; color:#222; }
-#prezzi table { width:100%; max-width:800px; margin:0 auto; border-collapse:collapse; font-size:18px; }
-#prezzi th, #prezzi td { padding:15px; border:1px solid #ddd; }
-#prezzi th { background:#000; color:#fff; text-transform:uppercase; }
-#prezzi tr:nth-child(even) td { background:#f2f2f2; }
-#prezzi tr:hover td { background:#eaeaea; }
+/* Prezzi */
+.price-note{border:2px dotted #cfe8e3;border-radius:var(--radius);padding:16px;background:#f7fffd;color:#21413b}
 
-#contatti { padding: 60px 20px; text-align: center; }
-#contatti h2 { margin-bottom: 20px; }
-#contatti a { color: #fff; text-decoration: underline; }
+/* Contatti */
+.contact{display:grid;gap:12px;max-width:560px}
+.contact label{display:grid;gap:6px;font-weight:600}
+.contact input,.contact textarea{border:2px solid #d8efe9;border-radius:12px;padding:10px 12px;font:inherit}
+.contact input:focus,.contact textarea:focus{outline:2px solid var(--brand);border-color:transparent}
 
-footer { background: #000; text-align:center; padding: 20px; margin-top:40px; }
+/* Footer */
+.footer{background:#081a18;color:#b9cac8;padding:18px 0}
+.footer a{color:#fff;text-decoration:none}
+
+/* Mobile menu */
+@media (max-width: 760px){
+  .burger{display:flex}
+  .menu{position:fixed;inset:52px 0 auto 0;background:#000;padding:12px 6%;display:none}
+  body.open .menu{display:block}
+  .menu a{display:block;margin:12px 0}
+  .cta-bar__inner{flex-direction:column;text-align:center}
+}
