@@ -63,3 +63,14 @@ input:focus, textarea:focus, select:focus { outline: 2px solid #93c5fd; border-c
   .hero-grid, .card-grid, .kpi, .form { grid-template-columns: 1fr; }
   .nav .actions { display: none; }
 }
+
+/* Extra smartphone refinements */
+@media (max-width: 640px) {
+  h1 { font-size: 1.8rem; }
+  h2 { font-size: 1.4rem; }
+  .hero { padding: 2rem 0 1rem; }
+  .nav { flex-wrap: wrap; }
+  .nav a { padding: .5rem 0; }
+  .card-grid { grid-template-columns: 1fr; }
+  .form { grid-template-columns: 1fr; }
+}
