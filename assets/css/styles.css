@@ -141,3 +141,26 @@ input:focus, textarea:focus, select:focus { outline: 2px solid #93c5fd; border-c
   }
   .actions { display: none; }
 }
+
+/* Sticky CTA for mobile */
+.sticky-cta {
+  display: none;
+}
+@media (max-width: 640px) {
+  .sticky-cta {
+    display: block;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(255,255,255,.95);
+    border-top: 1px solid #e5e7eb;
+    padding: .75rem;
+    text-align: center;
+    z-index: 100;
+  }
+  .sticky-cta .btn {
+    width: 100%;
+  }
+  body { padding-bottom: 4rem; }
+}
