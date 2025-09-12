@@ -1,30 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
-  <!-- Home -->
-  <url>
-    <loc>https://giuppe5401-stack.github.io/</loc>
-    <lastmod>2025-09-11</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-
-  <!-- Pagina Progetti -->
-  <url>
-    <loc>https://giuppe5401-stack.github.io/progetti.html</loc>
-    <lastmod>2025-09-11</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- Pagina Privacy -->
-  <url>
-    <loc>https://giuppe5401-stack.github.io/privacy.html</loc>
-    <lastmod>2025-09-11</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-  </url>
-
+  <url><loc>https://giuppe5401-stack.github.io/</loc></url>
+  <url><loc>https://giuppe5401-stack.github.io/progetti.html</loc></url>
+  <url><loc>https://giuppe5401-stack.github.io/privacy.html</loc></url>
 </urlset>
-
-

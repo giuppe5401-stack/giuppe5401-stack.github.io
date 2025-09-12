@@ -4,28 +4,27 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Creazione siti web Genova — &amp;weblab</title>
-  <meta name="description" content="Creazione siti web Genova: &amp;weblab realizza landing page ottimizzate, siti SEO e campagne Google Ads per aiutare aziende e professionisti a crescere online.">
+  <meta name="description" content="Creazione siti web Genova: &amp;weblab realizza siti moderni, landing page e campagne Google Ads con SEO locale e misurazione dei risultati.">
   <link rel="canonical" href="https://giuppe5401-stack.github.io/">
   <meta property="og:title" content="Creazione siti web Genova — &amp;weblab">
-  <meta property="og:description" content="Creazione siti web Genova, landing page SEO e campagne Ads su misura. Scopri i nostri progetti e richiedi un preventivo gratuito.">
+  <meta property="og:description" content="Siti veloci, SEO locale e Ads efficaci. Scopri i progetti &amp;weblab e richiedi un preventivo.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://giuppe5401-stack.github.io/">
-  <meta property="og:image" content="https://giuppe5401-stack.github.io/assets/logo/logo.png">
-  <link rel="icon" href="assets/logo/favicon.ico" type="image/x-icon">
+  <meta property="og:image" content="assets/logo/social-card.png">
+  <link rel="icon" type="image/svg+xml" href="assets/logo/favicon.svg">
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
   <header class="topbar">
     <nav class="container">
-      <a class="brand" href="#">&amp;weblab<span class="sparkle">✦</span></a>
-      <button class="burger" aria-label="Apri menu" onclick="document.body.classList.toggle('open')">
+      <a class="brand" href="#"><img src="assets/logo/logo.svg" alt="&amp;weblab logo" height="28"></a>
+      <button class="burger" aria-label="Apri menu" aria-expanded="false" aria-controls="menu" onclick="toggleMenu()">
         <span></span><span></span><span></span>
       </button>
-      <div class="menu">
-        <a href="#chisiamo">Chi siamo</a>
+      <div id="menu" class="menu">
         <a href="#servizi">Servizi</a>
-        <a href="#prezzi">Listino</a>
+        <a href="#processo">Metodo</a>
+        <a href="#prezzi">Prezzi</a>
         <a href="#contatti" class="btn">Contatti</a>
       </div>
     </nav>
@@ -33,96 +32,122 @@
 
   <main>
     <!-- HERO -->
-    <section class="hero container" id="chisiamo">
-      <p class="eyebrow">Ciao Genova! 👋</p>
+    <section class="hero container" id="intro">
       <h1>Creazione siti web e soluzioni digitali a Genova</h1>
-      <p class="lead">
-        Siti scattanti ⚡, SEO locale che ti fa trovare 🧭 e Google Ads che portano contatti 📈.
-        Strategia chiara, numeri trasparenti e un pizzico di divertimento.
-      </p>
+      <p class="lead">Realizziamo siti performanti, ottimizzati per la SEO locale e supportati da campagne Google Ads. Strategia chiara, misurazione costante e supporto vicino.</p>
       <div class="cta">
         <a href="#contatti" class="btn">Richiedi preventivo</a>
-        <a href="#prezzi" class="btn-ghost">Vedi listino</a>
-      </div>
-      <div class="stickers" aria-hidden="true">
-        <span>🚀</span><span>💡</span><span>✨</span><span>🧩</span>
+        <a href="#prezzi" class="btn-ghost">Vedi prezzi</a>
       </div>
     </section>
 
     <!-- SERVIZI -->
     <section class="container" id="servizi">
-      <h2>I nostri servizi digitali</h2>
+      <h2>I nostri servizi</h2>
       <div class="cards">
         <article class="card">
-          <div class="emoji">🎯</div>
           <h3>Siti web &amp; landing</h3>
-          <p>Design giocoso ma funzionale: responsive, veloci e focalizzati sulla conversione.</p>
+          <p>Progettazione UX/UI, contenuti e setup tecnico. Mobile-first, veloci e sicuri.</p>
         </article>
         <article class="card">
-          <div class="emoji">📍</div>
           <h3>SEO locale</h3>
-          <p>On-page, Google Business Profile e contenuti che parlano la lingua del quartiere.</p>
+          <p>On-page, pagine locali e Google Business Profile per farti trovare nella tua zona.</p>
         </article>
         <article class="card">
-          <div class="emoji">📣</div>
           <h3>Google Ads</h3>
-          <p>Campagne con tracciamento serio (ma dashboard felici), report chiari e A/B test.</p>
+          <p>Campagne orientate all’acquisizione con tracciamento conversioni e report mensili.</p>
         </article>
       </div>
     </section>
 
-    <!-- PERCHÉ NOI -->
-    <section class="container why">
-      <h2>Perché scegliere &amp;weblab</h2>
-      <ul class="bullets">
-        <li><strong>Strategia → design → misurazione:</strong> niente fuochi d’artificio, solo risultati.</li>
-        <li><strong>Setup rapido:</strong> partiamo in fretta e poi ottimizziamo insieme.</li>
-        <li><strong>Vicini a Genova:</strong> ci vediamo dal vivo, caffè incluso ☕.</li>
-      </ul>
-    </section>
-
-    <!-- CTA STRISCIA -->
-    <section class="cta-bar">
-      <div class="container cta-bar__inner">
-        <p>Facciamo 15 minuti di call e capiamo obiettivi, tempi e budget?</p>
-        <a href="#contatti" class="btn">Parliamone</a>
-      </div>
+    <!-- PROCESSO -->
+    <section class="container" id="processo">
+      <h2>Metodo di lavoro</h2>
+      <ol class="steps">
+        <li><strong>Analisi &amp; obiettivi</strong> — pubblico, proposta di valore, KPI.</li>
+        <li><strong>Design &amp; contenuti</strong> — wireframe, copy, componenti riutilizzabili.</li>
+        <li><strong>Sviluppo &amp; SEO</strong> — performance, accessibilità, schema markup.</li>
+        <li><strong>Misurazione</strong> — setup analytics, dashboard e ottimizzazioni.</li>
+      </ol>
     </section>
 
     <!-- PREZZI -->
     <section class="container" id="prezzi">
-      <h2>Listino prezzi</h2>
-      <div class="price-note">
-        <p>Pacchetti chiari per landing page, siti vetrina, SEO locale e Ads. Preventivi su misura senza sorprese.</p>
+      <h2>Prezzi</h2>
+      <div class="prices">
+        <article class="price">
+          <h3>Landing page</h3>
+          <p class="value">da 400€</p>
+          <ul>
+            <li>Design + copy base</li>
+            <li>SEO on-page</li>
+            <li>Tracciamento contatti</li>
+          </ul>
+        </article>
+        <article class="price">
+          <h3>Sito vetrina</h3>
+          <p class="value">da 700€</p>
+          <ul>
+            <li>Fino a 5 pagine</li>
+            <li>Moduli contatto</li>
+            <li>Ottimizzazione performance</li>
+          </ul>
+        </article>
+        <article class="price">
+          <h3>Gestione Ads</h3>
+          <p class="value">da 250€/mese</p>
+          <ul>
+            <li>Setup campagne</li>
+            <li>Report mensili</li>
+            <li>A/B test</li>
+          </ul>
+        </article>
       </div>
+      <p class="note">I prezzi sono indicativi e variano in base a complessità e tempistiche.</p>
     </section>
 
     <!-- CONTATTI -->
     <section class="container" id="contatti">
       <h2>Contatti</h2>
-      <form class="contact" onsubmit="event.preventDefault(); alert('Grazie! Ti risponderemo a breve 😊');">
-        <label>Nome
-          <input type="text" required>
-        </label>
-        <label>Email
-          <input type="email" required>
-        </label>
+      <form class="contact" onsubmit="event.preventDefault(); alert('Grazie! Ti risponderemo a breve.');">
+        <div class="grid">
+          <label>Nome
+            <input type="text" name="nome" required>
+          </label>
+          <label>Email
+            <input type="email" name="email" required>
+          </label>
+        </div>
         <label>Messaggio
-          <textarea rows="4" required></textarea>
+          <textarea name="messaggio" rows="5" required></textarea>
         </label>
-        <button class="btn" type="submit">Invia</button>
+        <button class="btn" type="submit">Invia richiesta</button>
       </form>
-      <p class="alt">Oppure scrivi a <a href="mailto:info@weblab.example">info@weblab.example</a></p>
+      <p class="alt">Preferisci scrivere direttamente? <a href="mailto:info@weblab.example">info@weblab.example</a></p>
     </section>
   </main>
 
   <footer class="footer">
     <div class="container">
+      <nav class="foot-nav">
+        <a href="progetti.html">Progetti</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="#intro">Torna su</a>
+      </nav>
       <small>© <span id="year"></span> &amp;weblab — Tutti i diritti riservati.</small>
     </div>
   </footer>
 
   <script>
+    function toggleMenu() { 
+      var b = document.body; 
+      var btn = document.querySelector('.burger');
+      var menu = document.getElementById('menu');
+      var open = !b.classList.contains('open');
+      b.classList.toggle('open', open);
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      menu.hidden = !open;
+    }
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 </body>
