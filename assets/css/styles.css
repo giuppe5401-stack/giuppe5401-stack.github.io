@@ -74,3 +74,70 @@ input:focus, textarea:focus, select:focus { outline: 2px solid #93c5fd; border-c
   .card-grid { grid-template-columns: 1fr; }
   .form { grid-template-columns: 1fr; }
 }
+
+/* Mobile menu hidden by default */
+.mobile-hidden { display: flex; }
+@media (max-width: 768px) {
+  .hamburger { 
+    font-size: 1.8rem; 
+    background: none; 
+    border: none; 
+    cursor: pointer; 
+    color: #0f172a; 
+  }
+  .mobile-hidden { display: none; flex-direction: column; width: 100%; margin-top: .5rem; }
+  .mobile-hidden.active { display: flex; }
+  .nav { flex-wrap: wrap; }
+  .actions { width: 100%; margin-top: .5rem; text-align: right; }
+  .btn { width: 100%; text-align: center; margin-top: .5rem; }
+  .card { margin-bottom: 1rem; }
+}
+
+/* --- Mobile-first clarity improvements --- */
+.only-mobile { display: none; }
+
+@media (max-width: 920px) {
+  .only-mobile { display: inline-block; }
+  #site-menu { display: none; width: 100%; }
+  #site-menu.open { display: flex; flex-direction: column; gap: .5rem; padding: .5rem 0; }
+  .nav { align-items: center; }
+}
+
+.btn-row { display: flex; gap: .75rem; flex-wrap: wrap; }
+@media (max-width: 640px) {
+  .btn-row .btn { width: 100%; text-align: center; }
+  .section { padding: 2rem 0; }
+  .card { padding: 1rem; }
+  .card + .card { margin-top: .5rem; }
+  p.lead { font-size: 1rem; }
+  .kpi .item { padding: .75rem; }
+  .nav { gap: .5rem; }
+  .logo img { height: 24px; }
+  .badge { font-size: .8rem; }
+  input, textarea, select { padding: 1rem; }
+  label { font-size: .95rem; }
+}
+
+/* --- Hamburger & mobile menu --- */
+.hamburger {
+  display: none;
+  background: transparent;
+  border: 1px solid #e5e7eb;
+  border-radius: .65rem;
+  padding: .5rem .75rem;
+  font-size: 1.1rem;
+  line-height: 1;
+  cursor: pointer;
+}
+@media (max-width: 920px) {
+  .hamburger { display: inline-block; }
+  .badges.mobile-hidden { display: none; }
+  .badges.mobile-hidden.open { 
+    display: flex; 
+    flex-direction: column; 
+    gap: .5rem; 
+    width: 100%;
+    margin-top: .5rem;
+  }
+  .actions { display: none; }
+}

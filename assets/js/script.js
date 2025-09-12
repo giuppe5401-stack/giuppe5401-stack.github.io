@@ -42,3 +42,26 @@
     });
   });
 })();
+
+
+  // Hamburger toggle
+  const menuToggle = document.getElementById('menu-toggle');
+  const nav = document.querySelector('nav.badges');
+  if(menuToggle && nav){
+    menuToggle.addEventListener('click', ()=>{
+      nav.classList.toggle('active');
+    });
+  }
+
+
+// Mobile menu toggle
+(function(){
+  const btn = document.getElementById('nav-toggle');
+  const menu = document.getElementById('site-menu');
+  if(btn && menu){
+    btn.addEventListener('click', () => {
+      const opened = menu.classList.toggle('open');
+      btn.setAttribute('aria-expanded', opened ? 'true' : 'false');
+    });
+  }
+})();
