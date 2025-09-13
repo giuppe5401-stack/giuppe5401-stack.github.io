@@ -90,3 +90,55 @@ h2{font-size:clamp(22px,3vw,32px);margin:0 0 10px}
   .menu a{display:block;margin:12px 0}
   .contact .grid{grid-template-columns:1fr}
 }
+/* ====== PRICING COLORATO ====== */
+#prezzi.section { padding: 80px 0; background: #fff; }
+#prezzi .section-head { text-align: left; margin-bottom: 28px; }
+#prezzi .cards { gap: 24px; }
+
+#prezzi .p-card {
+  position: relative;
+  background: #ffffff;
+  border-radius: 18px;
+  box-shadow: 0 12px 28px rgba(2,6,23,.08);
+  padding: 22px;
+  overflow: hidden;
+}
+
+/* Riga colorata in alto */
+#prezzi .p-card::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; height: 6px;
+  background: var(--grad, linear-gradient(90deg,#64748b,#94a3b8));
+}
+
+/* Badge piano */
+#prezzi .p-badge {
+  display: inline-block;
+  font-weight: 700;
+  font-size: .8rem;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(2,6,23,.06);
+  margin-bottom: 10px;
+}
+
+#prezzi .p-price {
+  font-size: 1.8rem;
+  font-weight: 800;
+  margin: 6px 0 12px;
+  color: #0f172a;
+}
+
+#prezzi .p-list { margin: 0 0 16px; padding-left: 18px; }
+#prezzi .p-list li { margin-bottom: 6px; color: #334155; }
+
+/* Varianti colore (gradienti vivaci) */
+#prezzi .p-start { --grad: linear-gradient(90deg,#60a5fa,#a78bfa); }   /* blu → viola */
+#prezzi .p-pro { --grad: linear-gradient(90deg,#34d399,#10b981); }     /* verdi */
+#prezzi .p-business { --grad: linear-gradient(90deg,#f59e0b,#ef4444); }/* ambra → rosso */
+
+/* Responsive */
+@media (max-width: 860px) {
+  #prezzi .p-card { padding: 20px; }
+}
