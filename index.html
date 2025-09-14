@@ -103,7 +103,7 @@
     </div>
   </div>
 <!-- ================= RECENSIONI ================= -->
-<section id="recensioni" class="section testimonials" aria-labelledby="recensioni-title">
+<section id="recensioni" ...>
   <div class="container">
     <header class="section-head">
       <h2 id="recensioni-title">Le recensioni dei nostri clienti</h2>
@@ -156,11 +156,63 @@
 
     </div>
   </div>
+</section> delle recensioni
+              <section id="lascia-recensione" class="section" aria-labelledby="lascia-recensione-title">
+  <div class="container">
+    <header class="section-head">
+      <h2 id="lascia-recensione-title">Lascia una recensione</h2>
+      <p class="subtitle">Racconta la tua esperienza con i nostri servizi.</p>
+    </header>
+
+    <div id="rev-status" class="sr-only" role="status" aria-live="polite"></div>
+
+    <form id="review-form" class="card t-card" action="save-review.php" method="POST">
+      <input type="text" name="company" id="company" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;opacity:0" aria-hidden="true">
+
+      <div class="grid-2">
+        <div class="form-field">
+          <label for="rev-name">Nome e iniziale del cognome *</label>
+          <input id="rev-name" name="name" type="text" placeholder="Es. Maria B." required>
+        </div>
+        <div class="form-field">
+          <label for="rev-role">Ruolo</label>
+          <input id="rev-role" name="role" type="text" placeholder="Es. Cliente, Titolare Studio">
+        </div>
+      </div>
+
+      <div class="form-field">
+        <label for="rev-rating">Valutazione *</label>
+        <select id="rev-rating" name="rating" required>
+          <option value="">Seleziona</option>
+          <option value="1">1</option><option value="2">2</option>
+          <option value="3">3</option><option value="4">4</option>
+          <option value="5">5</option>
+        </select>
+      </div>
+
+      <div class="form-field">
+        <label for="rev-text">La tua recensione *</label>
+        <textarea id="rev-text" name="text" rows="5" minlength="30" maxlength="800" required></textarea>
+      </div>
+
+      <div class="agree">
+        <label class="checkbox">
+          <input type="checkbox" id="rev-consent" name="consent" required>
+          <span>Autorizzo la pubblicazione della mia recensione sul sito.</span>
+        </label>
+      </div>
+
+      <div class="cta-row">
+        <button class="btn btn-primario" type="submit">Invia recensione</button>
+      </div>
+    </form>
+  </div>
 </section>
+
 ection><!-- ================= PREZZI ================= -->
 <section id="prezzi" class="section pricing" aria-labelledby="prezzi-title">
   <div class="container">
-    <header class="section-head">
+    <section id="prezzi" ...>
       <h2 id="prezzi-title">Prezzi onesti, nella media</h2>
      
     </header>
